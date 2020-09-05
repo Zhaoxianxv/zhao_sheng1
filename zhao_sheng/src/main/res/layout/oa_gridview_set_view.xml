@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/oa_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/main_set_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:background="@drawable/radius4_radio_group"
+        android:layout_margin="@dimen/margin_5dp"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/margin_8dp"/>
+
+</RelativeLayout>

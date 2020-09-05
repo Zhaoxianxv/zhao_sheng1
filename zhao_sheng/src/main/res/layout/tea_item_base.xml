@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ee_gray"
+    android:layout_marginTop="@dimen/margin_5dp">
+    <TextView
+        android:id="@+id/tea_base_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="获奖时间"
+        android:textColor="@color/b3_gray"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        />
+    <TextView
+        android:id="@+id/tea_base_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|right"
+        android:textColor="@color/b3_gray"
+        android:paddingRight="@dimen/margin_10dp"
+        android:text="base"
+
+        />
+
+
+</RelativeLayout>

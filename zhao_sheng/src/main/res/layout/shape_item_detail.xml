@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray01">
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/a3_gray"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/margin_40dp">
+
+
+            <ImageView
+                android:id="@+id/shapesinge_detail_praise"
+                android:layout_weight="1"
+                android:layout_width="@dimen/margin_50dp"
+                android:layout_height="@dimen/margin_20dp"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="false"
+                android:src="@drawable/shape_praise" />
+
+            <View
+                android:layout_width="@dimen/margin_1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:background="@color/a3_gray"/>
+
+            <ImageView
+                android:id="@+id/shapesinge_detail_comment"
+                android:layout_weight="1"
+                android:layout_width="@dimen/margin_20dp"
+                android:layout_height="@dimen/margin_20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/graded_dynamic_comments" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_above="@id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray01">
+
+            <com.yfy.view.swipe.xlist.XListView
+                android:id="@+id/shapesinge_detail_item_xlist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="#b7b7b7"
+                android:dividerHeight="0.5dp"
+                android:groupIndicator="@null"
+                android:listSelector="#00000000"
+                android:scrollbars="none" >
+            </com.yfy.view.swipe.xlist.XListView>
+
+            <!--<include layout="@layout/shape_group_text" />-->
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

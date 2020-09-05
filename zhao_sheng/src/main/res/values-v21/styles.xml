@@ -1,0 +1,16 @@
+<resources>
+
+
+
+    <style name="AppThemeCompat" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/app_base_color</item>
+        <item name="colorPrimaryDark">@color/app_base_color</item>
+        <item name="colorAccent">@color/app_base_color</item>
+        <item name="android:textColor">@color/app_base_text_color</item>
+        <item name="actionMenuTextColor">@color/WhiteSmoke</item>
+        <item name="android:windowBackground">@color/app_base_window_bg_color</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+</resources>

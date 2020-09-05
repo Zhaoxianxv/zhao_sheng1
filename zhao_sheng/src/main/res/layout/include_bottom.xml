@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bottom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="horizontal">
+
+
+    <com.yfy.view.button.DefaultBottomItem
+        android:id="@+id/home_bottom_school"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/margin_0dp"
+        android:layout_marginRight="@dimen/margin_0dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        >
+        <include layout="@layout/include_bottom_default_singe_txt"
+            />
+    </com.yfy.view.button.DefaultBottomItem>
+
+    <com.yfy.view.button.DefaultBottomItem
+        android:id="@+id/home_bottom_class"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/margin_0dp"
+        android:layout_marginRight="@dimen/margin_0dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        >
+        <include layout="@layout/include_bottom_default_singe_txt" />
+    </com.yfy.view.button.DefaultBottomItem>
+
+
+    <com.yfy.view.button.DefaultBottomItem
+        android:id="@+id/home_bottom_work"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/margin_0dp"
+        android:layout_marginRight="@dimen/margin_0dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+       >
+        <include layout="@layout/include_bottom_default_singe_txt" />
+    </com.yfy.view.button.DefaultBottomItem>
+
+
+
+
+
+</LinearLayout>

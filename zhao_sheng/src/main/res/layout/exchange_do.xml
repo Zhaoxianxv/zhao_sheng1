@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_25dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="@dimen/margin_15dp"
+            android:background="@color/DarkGray"
+            android:layout_marginLeft="@dimen/margin_20dp"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/timetable_fragment_top"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textsize3"
+            android:textColor="@color/DarkGray"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:text="不可申请"/>
+        <ImageView
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="@dimen/margin_15dp"
+            android:background="@color/ForestGreen"
+            android:layout_marginLeft="@dimen/margin_20dp"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textsize5"
+            android:textColor="@color/ForestGreen"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:text="可申请调课"/>
+    </LinearLayout>
+
+
+    <com.yfy.view.swipe.xlist.XListView
+        android:id="@+id/exchange_do_xlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/White"
+        android:dividerHeight="@dimen/margin_1dp"
+        android:layout_marginTop="@dimen/margin_5dp">
+    </com.yfy.view.swipe.xlist.XListView>
+</LinearLayout>

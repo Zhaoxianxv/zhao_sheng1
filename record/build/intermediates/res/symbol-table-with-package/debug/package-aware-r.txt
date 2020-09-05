@@ -1,0 +1,21 @@
+com.gy.record
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
+drawable ic_launcher
+id aac_name
+id aac_time
+id action_settings
+id complete_bt
+id curPro
+id listView
+id progressBar
+id reset_bt
+id start_bt
+layout activity_test
+layout item_listview
+menu main
+string action_settings
+string app_name
+string hello_world
+style AppBaseTheme
+style AppTheme

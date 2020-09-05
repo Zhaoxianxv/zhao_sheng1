@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!--<include layout="@layout/include_head2" />-->
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <com.yfy.view.swipe.xlist.XListView
+        android:id="@+id/vote_group_xlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:choiceMode="singleChoice"
+        >
+    </com.yfy.view.swipe.xlist.XListView>
+
+</LinearLayout>

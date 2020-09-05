@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/cyc_hot_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5dp"
+        android:gravity="center"
+        android:textSize="@dimen/textsize11"
+        android:text="000"
+        android:background="@drawable/shape_line_black"/>
+
+</LinearLayout>

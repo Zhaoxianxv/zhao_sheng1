@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/WhiteSmoke">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_25dp"
+        android:layout_marginBottom="@dimen/margin_40dp">
+        <TextView
+            android:id="@+id/maintain_detail_end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/e3_gray"
+            android:text=""
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#767676"/>
+
+
+        <LinearLayout
+            android:id="@+id/detail_item_do_layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/detail_item_yes"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="同意请假"
+                android:gravity="center"
+                android:textColor="#69b56e"/>
+            <TextView
+                android:id="@+id/detail_item_no"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="驳回请假"
+                android:gravity="center"
+                android:textColor="#ab161b"/>
+            <TextView
+                android:id="@+id/detail_item_choice"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="转交维修"
+                android:gravity="center"
+                android:textColor="#e79b53"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

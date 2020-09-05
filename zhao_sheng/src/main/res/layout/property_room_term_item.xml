@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/property_room_term_layout">
+
+    <TextView
+        android:id="@+id/property_room_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="教室1"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:id="@+id/property_room_term"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+
+        android:paddingLeft="10dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:text="s"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:id="@+id/property_room_bind_user"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+
+        android:paddingLeft="10dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:text="s"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/black" />
+
+
+</RelativeLayout>

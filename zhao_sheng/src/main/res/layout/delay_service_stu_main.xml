@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/public_swip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+        <LinearLayout
+            android:id="@+id/public_bottom_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/public_bottom_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/margin_45dp"
+                android:backgroundTint="@color/app_base_color"
+                android:text="考勤"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:id="@+id/public_bottom_b"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/margin_45dp"
+                android:backgroundTint="@color/app_base_color"
+                android:text="复制考勤"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/top_tag"
+            android:layout_width="match_parent"
+            android:background="@color/ee_gray"
+            android:layout_marginTop="@dimen/margin_45dp"
+            android:layout_height="@dimen/margin_40dp">
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/top_button_three"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_line_weight_black_24dp"
+                android:backgroundTint="@color/ee_gray"
+                android:textColor="@color/DarkGray"
+                android:maxLines="1"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="@dimen/textsize8"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="考勤点名"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/top_button_one"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_line_weight_black_24dp"
+                android:backgroundTint="@color/app_base_color"
+                android:textColor="@color/DarkGray"
+                android:maxLines="1"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="@dimen/textsize8"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="学生信息"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/top_button_two"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_line_weight_black_24dp"
+                android:backgroundTint="@color/ee_gray"
+                android:textColor="@color/DarkGray"
+                android:maxLines="1"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="@dimen/textsize8"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="考勤信息"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/public_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/public_bottom_layout"
+            android:layout_below="@id/top_tag">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

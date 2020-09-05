@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/WhiteSmoke"
+    tools:context="com.yfy.app.exchang.EXchangeRequestActivity">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <TextView
+        android:id="@+id/exchange_project_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize9"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_20dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:minHeight="@dimen/margin_35dp">
+        <ImageView
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="@dimen/margin_30dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:padding="@dimen/margin_3dp"
+            android:src="@mipmap/scheduleclock"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/exchange_submit_1"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/textsize6"
+            android:layout_weight="1"
+            android:textColor="@color/public_color66"
+            android:text="www"
+            android:gravity="center"/>
+        <ImageView
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="@dimen/margin_30dp"
+            android:src="@mipmap/scheduleright"
+
+            android:padding="@dimen/margin_3dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/exchange_submit_2"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/public_color66"
+            android:textSize="@dimen/textsize6"
+            android:layout_weight="1"
+            android:text="www"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:minHeight="@dimen/margin_35dp">
+        <ImageView
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="@dimen/margin_30dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+
+            android:padding="@dimen/margin_3dp"
+            android:src="@mipmap/scheduleclass"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/exchange_submit_3"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/textsize6"
+            android:layout_weight="1"
+            android:textColor="@color/public_color66"
+            android:text="www"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="@dimen/margin_30dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/scheduleright"
+            android:padding="@dimen/margin_3dp"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/exchange_submit_4"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/textsize6"
+            android:layout_weight="1"
+            android:textColor="@color/public_color66"
+            android:text="www"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_35dp">
+
+        <EditText
+            android:id="@+id/exchnage_add_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入调课说明"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

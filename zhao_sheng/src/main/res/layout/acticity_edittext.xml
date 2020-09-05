@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e3_gray"
+    android:orientation="vertical" >
+
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:hint="@string/edit_hint"
+        android:textCursorDrawable="@null"
+        android:minHeight="@dimen/edit_min_h"
+        android:padding="@dimen/edit_padding"
+        android:textColorHint="@color/b3_gray" />
+
+</LinearLayout>

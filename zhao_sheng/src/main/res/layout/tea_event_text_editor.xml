@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:layout_marginBottom="@dimen/margin_25dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tea_edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_marginBottom="@dimen/margin_3dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            tools:text="@string/ok"/>
+        <EditText
+            android:id="@+id/tea_edit_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/margin_80dp"
+            android:padding="@dimen/margin_5dp"
+            android:gravity="start"
+            android:background="@drawable/radius3_whitebg_basecolorline"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_below="@id/tea_edit_name"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/margin_80dp"
+        android:layout_marginRight="@dimen/margin_5dp"
+        android:layout_marginLeft="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        app:cardCornerRadius="@dimen/margin_5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_20dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize7"
+                android:text="小结"
+                android:layout_marginTop="@dimen/margin_3dp"/>
+            <TextView
+                android:id="@+id/duty_add_item_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:gravity="center"
+                android:textSize="@dimen/textsize5"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:paddingRight="@dimen/margin_8dp"
+                android:paddingLeft="@dimen/margin_8dp"
+                android:visibility="gone"
+                android:text="上传"
+                android:textColor="@color/red"
+                android:background="@drawable/radius3_whitebg_basecolorline"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_3dp"/>
+
+            <EditText
+                android:id="@+id/duty_add_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_25dp"
+                android:minHeight="@dimen/margin_80dp"
+                android:background="@color/white"
+                android:hint="请填写小结内容"
+                android:gravity="start"
+                android:textSize="@dimen/textsize7"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:paddingRight="@dimen/margin_10dp"
+                android:paddingBottom="@dimen/margin_5dp"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

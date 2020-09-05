@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/head_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp" >
+
+
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+        <com.yfy.app.info_submit.view.HeaderMenuIndicator
+            android:id="@+id/menuIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/radius5_white"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal" >
+        </com.yfy.app.info_submit.view.HeaderMenuIndicator>
+    </RelativeLayout>
+
+    <com.yfy.app.info_submit.view.MarqueeTextView
+        android:id="@+id/submit_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head_rl"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/submit_tips"
+        android:textColor="@color/app_base_color" />
+
+    <RelativeLayout
+        android:id="@+id/content_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/submit_tips" >
+
+        <ListView
+            android:id="@+id/form_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="0dp"
+            >
+        </ListView>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_item_head" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/radius5_white"
+        android:backgroundTint="@color/app_base_color"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/White" />
+
+</RelativeLayout>

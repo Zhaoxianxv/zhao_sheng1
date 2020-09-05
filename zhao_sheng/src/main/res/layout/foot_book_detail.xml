@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:layout_height="match_parent">
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_50dp"
+        android:background="@color/gray_text"/>
+    <LinearLayout
+        android:id="@+id/re_bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp"
+        android:background="@color/e3_gray"
+        android:paddingTop="@dimen/margin_3dp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/foot_add_suggest_button"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/suggest"
+            android:textSize="@dimen/textsize5"
+            android:textColor="@color/gray_text"
+            android:background="@drawable/shape_lightgray"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_2dp"/>
+        <ImageView
+            android:id="@+id/foot_add_reting_image"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_40dp"
+            />
+        <TextView
+            android:id="@+id/foot_add_reting_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="@dimen/textsize5"
+            android:textColor="@color/gray_text"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            android:layout_marginTop="@dimen/margin_3dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/re_bottom"
+        android:orientation="vertical">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_5dp"
+                android:paddingLeft="@dimen/margin_5dp"
+                android:paddingRight="@dimen/margin_5dp">
+
+                <ImageView
+                    android:id="@+id/foot_detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="fitXY"
+                    />
+                <TextView
+                    android:id="@+id/foot_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize7"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

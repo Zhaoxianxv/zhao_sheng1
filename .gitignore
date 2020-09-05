@@ -1,0 +1,13 @@
+*.iml
+/.gradle
+/.idea
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+gradle-app.setting
+*.jks
+##-------指定文件-----
+/zhao_sheng/src/main/java/com/yfy/base
+/zhao_sheng/src/main/java/com/yfy/final_tag

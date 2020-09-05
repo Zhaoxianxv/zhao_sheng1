@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/light_gray01"
+    android:layout_height="match_parent">
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+    <com.yfy.view.ClearEditText
+        android:id="@+id/shape_clear_et"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/notice_search_et_bg"
+        android:hint="@string/content"
+        android:textSize="@dimen/textsize7"
+        android:paddingRight="10dp"
+        app:l_Height="30dp"
+        app:l_Width="30dp"
+        app:l_drawable="@drawable/notice_search"
+        app:r_Height="20dp"
+        app:r_Width="20dp"
+        app:r_drawable="@drawable/x" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shape_search_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shape_type_header"
+        android:scrollbars="none"
+        />
+</LinearLayout>

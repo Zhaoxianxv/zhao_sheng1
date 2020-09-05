@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_60dp">
+        <TextView
+            android:id="@+id/answer_detail_item_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="已采纳"
+            android:textSize="@dimen/textsize5"
+            android:paddingRight="@dimen/margin_5dp"
+            android:paddingLeft="@dimen/margin_5dp"
+            android:textColor="@color/white"
+            android:background="#0087ee"/>
+
+        <ImageView
+            android:id="@+id/answer_detail_item_head"
+            android:layout_width="@dimen/margin_50dp"
+            android:layout_height="@dimen/margin_50dp"
+            android:src="@drawable/oval_gray"
+            android:layout_marginLeft="@dimen/margin_15dp"
+            android:layout_marginTop="@dimen/margin_5dp"/>
+
+
+
+        <TextView
+            android:id="@+id/answer_detail_item_parise_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_40dp"
+            android:textColor="@color/red"/>
+
+
+        <ImageView
+            android:id="@+id/answer_detail_item_parise"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="@dimen/margin_30dp"
+            android:src="@drawable/oval_gray"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_5dp"
+            android:layout_toLeftOf="@id/answer_detail_item_parise_num"/>
+
+        <ImageView
+            android:id="@+id/answer_detail_item_adopt"
+            android:layout_width="@dimen/margin_20dp"
+            android:layout_height="@dimen/margin_20dp"
+            android:src="@mipmap/qa_info"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/answer_detail_item_parise"
+            android:layout_marginRight="@dimen/margin_30dp"
+            android:layout_marginTop="@dimen/margin_5dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/margin_5dp"
+            android:layout_toRightOf="@id/answer_detail_item_head"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_toLeftOf="@id/answer_detail_item_adopt"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/answer_detail_item_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize11"
+                android:text="@string/app_name"
+
+                />
+            <TextView
+                android:id="@+id/answer_detail_item_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="titme"
+                android:textColor="@color/gray"
+                android:singleLine="true"
+                />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/answer_detail_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:paddingLeft="@dimen/margin_20dp"
+        android:paddingRight="@dimen/margin_20dp"
+        android:textColor="@color/a3_gray"
+        />
+    <ImageView
+        android:id="@+id/answer_detail_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_250dp"
+        android:layout_marginBottom="@dimen/margin_5dp"/>
+</LinearLayout>

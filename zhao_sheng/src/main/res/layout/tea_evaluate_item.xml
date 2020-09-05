@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_apply_layout"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="@dimen/margin_50dp">
+
+    <TextView
+        android:id="@+id/selected_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:text="第一节课"
+        android:textSize="@dimen/textsize11"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/tea_add_count"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/margin_15dp"
+        android:text="@string/no_order"
+        android:textColor="@color/orange2"
+        android:textSize="@dimen/textsize5"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/tea_add_submitcount"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/tea_add_count"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:text="@string/no_order"
+        android:textColor="@color/green"
+        android:textSize="@dimen/textsize5"
+        android:gravity="center_vertical"/>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/choice_fragment_swip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/public_deleted_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/red"
+            android:text="@string/delete"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize9"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/choice_fragment_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/public_deleted_text">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

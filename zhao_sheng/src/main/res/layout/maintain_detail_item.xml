@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/WhiteSmoke"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/detail_item_head"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/oval_gray"
+            android:layout_marginTop="@dimen/margin_15dp"
+            android:layout_marginLeft="10dp"/>
+
+        <android.support.v7.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/margin_90dp"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginRight="@dimen/margin_8dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardBackgroundColor="@color/white">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/detail_item_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_25dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/margin_20dp"
+                        android:text="ssssssssss"
+                        android:textColor="@color/a3_gray"/>
+                    <TextView
+                        android:id="@+id/detail_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_25dp"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:text="@string/app_name"
+                        android:gravity="center"
+                        android:textSize="@dimen/textsize9"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/gray_tr"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_3dp"/>
+                <TextView
+                    android:id="@+id/detail_item_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/textsize5"
+                    android:textColor="@color/oranges"
+                    android:layout_marginTop="@dimen/margin_3dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"/>
+                <TextView
+                    android:id="@+id/detail_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/textsize6"
+                    android:textColor="#444444"
+                    android:ellipsize="end"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"/>
+
+
+                <com.yfy.view.multi.MultiPictureView
+                    android:id="@+id/maintain_main_item_mult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:layout_marginRight="@dimen/margin_5dp"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    app:imageLayoutMode="STATIC"
+                    app:max="9"
+                    app:ratio="1"
+                    app:space="6dp"
+                    app:span="5"
+                    />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+</LinearLayout>

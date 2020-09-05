@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvgetdropdownview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:minWidth="@dimen/margin_120dp"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_8dp"
+        android:paddingRight="@dimen/margin_10dp"
+        android:paddingLeft="@dimen/margin_10dp"
+        android:paddingTop="@dimen/margin_8dp"
+        tools:text="adsasf"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:background="@color/gray1"
+        android:layout_alignParentTop="true"/>
+</RelativeLayout>

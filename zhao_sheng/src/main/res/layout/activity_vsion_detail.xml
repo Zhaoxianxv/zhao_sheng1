@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+    tools:context="com.yfy.app.VsionDetailActivity">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:padding="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_30dp"/>
+
+    <TextView
+        android:id="@+id/version_school_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/textsize12"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:text=""
+        android:textColor="@color/Maroon"/>
+    <TextView
+        android:id="@+id/version_school_site"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textColor="@color/DarkGray"
+        android:textSize="@dimen/textsize8"
+        android:layout_marginTop="@dimen/margin_30dp"
+        />
+    <TextView
+        android:id="@+id/version_school_tell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="联系电话：028-85030159"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:textColor="@color/canlendar_text_color"
+        android:textSize="@dimen/textsize9"
+        />
+    <TextView
+        android:id="@+id/version_school_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:textColor="@color/canlendar_text_color"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:textSize="@dimen/textsize8"
+        />
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:gravity="center"
+        android:textColor="@color/canlendar_text_color"
+        android:textSize="@dimen/textsize7"
+        android:text="(Version 2.0)" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/version_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="用户协议"
+            android:gravity="center"
+            android:textColor="@color/app_base_color"
+            android:autoLink="none"
+            android:textSize="@dimen/textsize7"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="和"
+            android:textColor="@color/canlendar_text_color"
+            android:gravity="center"
+            android:textSize="@dimen/textsize7"
+            />
+        <TextView
+            android:id="@+id/version_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐私声明"
+            android:gravity="center"
+            android:textColor="@color/app_base_color"
+            android:autoLink="none"
+            android:textSize="@dimen/textsize7"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/version_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:textColor="@color/canlendar_text_color"
+        android:textSize="@dimen/textsize7"
+        android:layout_marginBottom="@dimen/margin_30dp"
+        />
+</LinearLayout>

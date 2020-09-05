@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="@dimen/margin_45dp">
+        <TextView
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话号码 "
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            />
+        <EditText
+            android:id="@+id/call_edit_first"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:background="@android:color/white"
+            android:textSize="@dimen/textsize8"
+            android:layout_toRightOf="@id/one"
+            android:hint="请输入联系号码"
+            android:selectAllOnFocus="true"
+            android:textColorHint="@color/gray"
+            android:inputType="phone"
+            android:paddingLeft="@dimen/margin_20dp"
+            android:imeOptions="actionDone"
+            />
+
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="@dimen/margin_45dp">
+        <TextView
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认号码 "
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            />
+        <EditText
+            android:id="@+id/call_edit_again"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:background="@android:color/white"
+            android:textSize="@dimen/textsize8"
+            android:layout_toRightOf="@id/two"
+            android:hint="请再次输入"
+            android:selectAllOnFocus="true"
+            android:textColorHint="@color/gray"
+            android:inputType="phone"
+            android:paddingLeft="@dimen/margin_20dp"
+            android:imeOptions="actionDone"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

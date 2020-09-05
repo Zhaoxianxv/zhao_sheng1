@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_school_name" translatable="false">泡桐树小学境界校区</string>
+    <string name="again_click_exit" translatable="false">再按一次退出程序</string>
+
+
+    <!-- 下拉加载，上拉刷新 -->
+    <string name="pull_to_refresh_pull_label" translatable="false">下拉刷新</string>
+    <string name="pull_to_refresh_release_label" translatable="false">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label" translatable="false">刷新\u2026</string>
+    <string name="pull_to_refresh_footer_release_label" translatable="false">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label" translatable="false">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_pull_flush" translatable="false">加载中</string>
+    <string name="pull_to_refresh_footer_refreshing_label" translatable="false">加载中\u2026</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+
+
+    <!--xlist-->
+    <string name="xlistview_header_hint_normal" translatable="false">下拉刷新</string>
+    <string name="xlistview_header_hint_ready" translatable="false">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading" translatable="false">正在加载...</string>
+    <string name="xlistview_header_last_time" translatable="false">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal" translatable="false">查看更多</string>
+    <string name="xlistview_footer_hint_ready" translatable="false">松开载入更多</string>
+    <string name="xlist_loadmore_bottom_toast" translatable="false">到底了</string>
+    <string name="xlist_loadmore_end_toast" translatable="false">没有了</string>
+
+    <string name="app_name" translatable="false">成都市实验小学</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+
+    <string name="phone_tips" translatable="false">联系方式为预留家长的手机号;如忘记请致电学校查询</string>
+    <string name="authente_phone_hint" translatable="false">输入预留家属手机号码…</string>
+    <string name="authente_name_hint" translatable="false">输入宝宝名字…</string>
+    <string name="authente_point" translatable="false">《招生须知》</string>
+    <string name="authente_text" translatable="false">验证</string>
+    <string name="point_text" translatable="false">查看招生须知</string>
+    <string name="fill_in_text" translatable="false">填资料/查分班</string>
+    <string name="not_fill_w" translatable="false">未填写</string>
+    <string name="index_people" translatable="false">搜索人姓名/拼音</string>
+
+    <string name="submit" translatable="false">提 交</string>
+    <string name="class_search" translatable="false">分班查询</string>
+    <string name="submit_tips" translatable="false">请完整填写所有资料后，点击下方提交按钮，将资料提交至服务器！</string>
+    <string name="man" translatable="false">男</string>
+    <string name="woman" translatable="false">女</string>
+    <string name="kg" translatable="false">kg</string>
+    <string name="cm" translatable="false">cm</string>
+    <string name="wu" translatable="false">无</string>
+    <string name="define" translatable="false">自定义</string>
+    <string name="selected" translatable="false">已选</string>
+    <string name="selectable" translatable="false">可选</string>
+    <string name="add" translatable="false">添加</string>
+    <string name="tip" translatable="false">提示</string>
+    <string name="submit_or_not" translatable="false">是否提交当前资料?</string>
+    <string name="back2" translatable="false">直接返回</string>
+    <string name="submit2" translatable="false">提交当前资料</string>
+    <string name="result" translatable="false">查询结果</string>
+    <string name="hint_e_b" translatable="false">请输入自定义的语言表达…</string>
+    <string name="certificate" translatable="false">请选择证件类型</string>
+    <string name="sfz" translatable="false">身份证</string>
+    <string name="other" translatable="false">其他</string>
+    <string name="cancle" translatable="false">取消</string>
+    <string name="change" translatable="false">与＜监护人2＞手机号码交换</string>
+    <string name="is_clear" translatable="false">这会清空所有已填选项，是否继续?</string>
+
+    <!--upData-->
+
+    <string name="add_preission" translatable="false">当前操作,需要**权限。\n是否添加</string>
+
+
+    <!-- 主界面 -->
+    <string name="main_title" translatable="false">实验小学</string>
+    <string name="click_login" translatable="false">点击登录</string>
+    <string name="login_type" translatable="false">请选择账号类型</string>
+    <string name="teacher" translatable="false">教师</string>
+    <string name="student" translatable="false">学生</string>
+    <string name="login" translatable="false">登录</string>
+
+    <string name="app_cancel" translatable="false">取消</string>
+    <string name="app_back" translatable="false">返回</string>
+    <string name="app_delete" translatable="false">删除</string>
+    <string name="app_ok" translatable="false">确定</string>
+
+    <!--校园新闻-->
+    <string name="write_comment" translatable="false">写评论</string>
+    <string name="not_school_news_again" translatable="false">暂无校园新闻,可点击重试</string>
+    <string name="fail_load_again" translatable="false">加载失败,点击重试</string>
+    <string name="loading_again" translatable="false">正在加载中,请稍后...</string>
+    <!-- 设置 -->
+    <string name="intro1" translatable="false">本应用程序版权所属：成都市实验小学，最终解释权为永风扬网络科技有限公司所有。</string>
+    <string name="intro2" translatable="false">当前版本：1.0</string>
+    <string name="intro3" translatable="false">应用分类：教育</string>
+    <string name="log_off" translatable="false">注销登录</string>
+    <string name="exit" translatable="false">退出应用</string>
+    <!-- 校园新闻 -->
+    <string name="school_news" translatable="false">校园新闻</string>
+    <string name="news_no_data" translatable="false">新闻加载中，下拉刷新~</string>
+    <string name="news_detail" translatable="false">新闻详情</string>
+    <string name="news_comment" translatable="false">评论</string>
+    <!-- 每日食谱 -->
+    <string name="dealbook" translatable="false">每日食谱</string>
+    <!-- 课程表 -->
+    <string name="schedule" translatable="false">课程表</string>
+    <!-- 每日食谱 -->
+    <string name="about" translatable="false">关于</string>
+    <!-- 班级新闻 -->
+    <string name="class_news" translatable="false">班级新闻</string>
+    <string name="no_class_news" translatable="false">暂无班级新闻</string>
+    <!-- 公告 -->
+    <string name="affiche_head" translatable="false">公告</string>
+    <string name="affiche_send" translatable="false">发布</string>
+    <string name="affiche_detail" translatable="false">详情</string>
+    <string name="affiche_send_title" translatable="false">标题</string>
+    <string name="affiche_send_content" translatable="false">内容</string>
+
+
+    <!-- 评论 -->
+
+    <string name="comment_title" translatable="false">请输入标题</string>
+    <string name="comment_content" translatable="false">请输入正文...</string>
+
+    <!-- 班级圈 -->
+    <string name="share" translatable="false">分享</string>
+    <string name="comment" translatable="false">评论</string>
+    <string name="good" translatable="false">赞</string>
+    <string name="moments" translatable="false">班级圈</string>
+    <string name="share_wx" translatable="false">微信好友</string>
+    <string name="share_moments" translatable="false">朋友圈</string>
+    <string name="share_weibo" translatable="false">新浪微博</string>
+    <string name="zhuti_title" translatable="false">学校功能选择</string>
+    <string name="zhuti_news_title" translatable="false">新闻主页</string>
+    <string name="tishi" translatable="false">功能尚未开通哦,请联系服务提供商~</string>
+    <string name="no_data" translatable="false">没有内容~</string>
+    <string name="schoolhome_info_error" translatable="false">学校信息出错</string>
+    <string name="schoolhome_info_tishi" translatable="false">点击屏幕进入~</string>
+
+
+    <!-- main -->
+    <string name="main_left_title" translatable="false">频道分类</string>
+    <string name="main_left_men1" translatable="false">新闻</string>
+    <string name="main_left_men2" translatable="false">班级</string>
+    <string name="main_left_men3" translatable="false">专题网站</string>
+    <string name="main_left_men4" translatable="false">视频网站</string>
+    <string name="main_left_english" translatable="false">英文网站</string>
+    <string name="right_layout_collect" translatable="false">收藏</string>
+    <string name="right_layout_publish" translatable="false">发布</string>
+    <string name="right_layout_comment" translatable="false">评论</string>
+    <string name="right_layout_classroom" translatable="false">班级</string>
+    <string name="below_item1" translatable="false">门户网站</string>
+    <string name="below_item2" translatable="false">班级网站</string>
+    <string name="below_item3" translatable="false">校长信箱</string>
+    <string name="below_item4" translatable="false">更 多</string>
+    <string name="ss_search_edit_content_hint" translatable="false">输入学校名称搜索</string>
+    <!-- 登录 -->
+
+    <string name="entry_userName" translatable="false">用户名:</string>
+    <string name="entry_userPassword" translatable="false">密 码:</string>
+    <string name="entry_textEntry" translatable="false">登 录</string>
+    <string name="entry_textEntry_title" translatable="false">用户登录</string>
+    <string name="entry_textpwd" translatable="false">忘记密码?</string>
+    <string name="entry_hint_name" translatable="false">请输入用户名</string>
+    <string name="entry_hint_pwd" translatable="false">请输入密码</string>
+    <string name="no_null" translatable="false">亲帐号和密码不能为空哦</string>
+    <string name="no_net" translatable="false">亲您的网络开小差了哦</string>
+    <string name="no_net1" translatable="false">网络异常获取内容失败</string>
+    <string name="update_app_dioag_title" translatable="false">更新提示</string>
+    <string name="update_app_dioag_content" translatable="false">软件已更新,当前版本可能无法正常使用~</string>
+    <string name="xiacigengxin" translatable="false">下次更新</string>
+    <string name="gengxin" translatable="false">更新</string>
+
+    <!-- news -->
+    <string name="news_title" translatable="false">盐道街小学新闻</string>
+    <string name="news_title1" translatable="false">天涯石小学</string>
+    <string name="connect_error" translatable="false">连接出错</string>
+    <string name="com_hint" translatable="false">写评论,最多250个字</string>
+    <string name="comment_good" translatable="false">评论成功,等待审核</string>
+    <string name="comment_false" translatable="false">网络异常评论失败</string>
+    <string name="comment_false3" translatable="false">亲 您还没有登录哦~</string>
+    <string name="comment_false1" translatable="false">亲 登录过后才可评论哦~</string>
+    <string name="comment_false2" translatable="false">亲 登录过后才可收藏哦~</string>
+    <string name="collect_false" translatable="false">网络异常收藏失败</string>
+    <string name="collect_true" translatable="false">收藏成功</string>
+    <string name="text_no_data" translatable="false">没有内容点击刷新~</string>
+
+    <!-- dioag -->
+
+    <string name="classroom" translatable="false">班级选择</string>
+    <string name="addenw_menhu" translatable="false">门户网站</string>
+    <string name="addenw_banji" translatable="false">班级网站</string>
+
+    <!-- 天剑新闻 -->
+
+    <string name="addnew_title" translatable="false">新闻标题</string>
+    <string name="addnew_tutle_hint" translatable="false">请输入新闻标题</string>
+    <string name="addnew_title_tontent" translatable="false">新闻内容</string>
+    <string name="addnew_title_tontent1" translatable="false">新闻详细内容</string>
+    <string name="addnew_title_tontent_hint" translatable="false">请输入新闻内容最多500字</string>
+
+    <!-- right -->
+    <string name="right_zhuxiao" translatable="false">注销登录</string>
+    <string name="right_denglu" translatable="false">点击登录</string>
+    <string name="right_title" translatable="false">用户中心</string>
+    <string name="right_item1" translatable="false">未登录</string>
+    <string name="right_item2" translatable="false">发布新闻</string>
+    <string name="right_item3" translatable="false">新闻管理(门户)</string>
+    <string name="right_item9" translatable="false">新闻管理(班级)</string>
+    <string name="right_item4" translatable="false">评论管理</string>
+    <string name="right_item5" translatable="false">我的收藏</string>
+    <string name="right_item6" translatable="false">信箱管理</string>
+    <string name="right_item7" translatable="false">特别关注</string>
+    <string name="right_item8" translatable="false">新闻查找</string>
+    <string name="right_item10" translatable="false">学校选择</string>
+
+    <!-- email -->
+    <string name="shousuo_hint" translatable="false">点击输入搜索关键字</string>
+    <string name="underway_item_title" translatable="false">维修内容:</string>
+    <string name="underway_dialog_title" translatable="false">菜单</string>
+    <string name="underway_dialog_item1" translatable="false">删除该条</string>
+    <string name="underway_dialog_item2" translatable="false">禁止</string>
+    <string name="underway_dialog_item3" translatable="false">发布</string>
+    <string name="underway_dialog_cancel" translatable="false">取消</string>
+    <string name="email_liuyan" translatable="false">回复留言</string>
+    <string name="email_huifucontent" translatable="false">回复留言:</string>
+    <string name="email_xiangxi" translatable="false">留言详情</string>
+    <string name="liuyan_content" translatable="false">留言内容：</string>
+    <string name="liuyan_huifu" translatable="false">留言内容：</string>
+    <string name="liuyan_tishi" translatable="false">温馨提示：留言即表示您已阅读并同意附后的留言须知。点击阅读留言须知</string>
+    <string name="xuzhi_content1" translatable="false">* 此信息由校长亲自查看，并分类处理。</string>
+    <string name="xuzhi_content2" translatable="false">* 本着一切为孩子的原则,欢迎您为学校管理及发展提出宝贵的意见和建议。</string>
+    <string name="xuzhi_content3" translatable="false">* 若您的意见需要及时答复，请在留言内容里留下联系电话或者其他方式。</string>
+    <string name="xuzhi_content4" translatable="false">温馨提示</string>
+    <string name="xuzhi_content5" translatable="false">* 请遵守国家有关法律、法规，尊重网上道德。如果违反有关法律法规，后果由自己承担。</string>
+    <string name="xuzhi_content6" translatable="false">* 我校拥有管理笔名和留言的一切权利。</string>
+    <string name="liuyan_title1" translatable="false">姓名</string>
+    <string name="liuyan_title2" translatable="false">邮箱</string>
+    <string name="liuyan_title4" translatable="false">电话</string>
+    <string name="liuyan_title3" translatable="false">留言内容</string>
+    <string name="huifu_null_tishi" translatable="false">回复内容不能为空哦</string>
+    <string name="net_yichang" translatable="false">网络异常~</string>
+    <string name="state_sz_fail" translatable="false">操作失败请重试~</string>
+    <string name="huif_ok" translatable="false">回复成功~</string>
+    <string name="state_ok" translatable="false">操作成功~</string>
+    <string name="fabu_ok" translatable="false">发布成功~</string>
+    <string name="jingz_ok" translatable="false">禁止成功~</string>
+    <string name="del_ok" translatable="false">删除成功~</string>
+    <string name="state" translatable="false">操作</string>
+    <string name="boss_email_adm" translatable="false">校长信息管理</string>
+    <string name="del" translatable="false">删除</string>
+
+    <!-- moments -->
+    <string name="load_more" translatable="false">加载更多</string>
+    <string name="p2refresh_head_load_more" translatable="false">加载更多</string>
+    <string name="p2refresh_end_load_more" translatable="false">更 多</string>
+    <string name="p2refresh_end_click_load_more" translatable="false">没有更多</string>
+    <string name="p2refresh_release_refresh" translatable="false">松开刷新</string>
+    <string name="p2refresh_pull_to_refresh" translatable="false">下拉刷新</string>
+    <string name="p2refresh_doing_head_refresh" translatable="false">正在刷新&#8230;</string>
+    <string name="p2refresh_doing_end_refresh" translatable="false">加载中&#8230;</string>
+    <string name="p2refresh_refresh_lasttime" translatable="false">最近更新&#160;&#058;&#160;</string>
+    <string name="moment_title1" translatable="false">奖励排行</string>
+    <string name="moment_title2" translatable="false">发送奖励</string>
+    <string name="moment_title3" translatable="false">1年级1班</string>
+    <string name="zan_string" translatable="false">赞</string>
+    <string name="share_string" translatable="false">分享</string>
+    <string name="comments_string" translatable="false">评论</string>
+    <string name="send_btn" translatable="false">发送</string>
+    <string name="rank" translatable="false">排名</string>
+    <string name="rank_name" translatable="false">姓名</string>
+    <string name="reward_count" translatable="false">奖励总数</string>
+    <string name="reward_order" translatable="false">奖励排行</string>
+    <string name="choose_grad" translatable="false">请选择班级</string>
+    <string name="share_list" translatable="false">分享列表</string>
+    <string name="had_praise" translatable="false">已赞</string>
+    <string name="not_install" translatable="false">还未安装微信</string>
+    <string name="content_hint" translatable="false">说点什么吧...</string>
+    <string name="most_pic" translatable="false">最多选择九张图片</string>
+    <string name="input_empty" translatable="false">请输入内容</string>
+    <string name="fabiao" translatable="false">发表动态</string>
+    <string name="uploading" translatable="false">正在上传</string>
+    <string name="send_success" translatable="false">发送成功</string>
+    <string name="send_failed" translatable="false">发送失败</string>
+    <string name="time_line_txt" translatable="false">这是一段默认文字</string>
+    <string name="time_line_title" translatable="false">奖励时间线</string>
+    <string name="send_reward" translatable="false">发送奖励</string>
+    <string name="reward_stu" translatable="false">奖励学生</string>
+    <string name="reward_reason" translatable="false">奖励原因</string>
+    <string name="please_choose_time" translatable="false">请选择时间</string>
+    <string name="reward_description" translatable="false">奖励描述</string>
+    <string name="description_hind" translatable="false">描述</string>
+    <string name="send_dy" translatable="false">发表动态</string>
+    <string name="star" translatable="false">星</string>
+
+    <string name="choose_member" translatable="false">选择成员</string>
+    <string name="choose_finish" translatable="false">完成</string>
+    <string name="sending_title" translatable="false">发送奖励</string>
+    <string name="sending_rewards" translatable="false">正在提交</string>
+    <string name="least_stars" translatable="false">至少选择一个星星</string>
+    <string name="least_stu" translatable="false">至少选择一个学生</string>
+    <string name="reward_reason_des" translatable="false">请选择或描述奖励原因</string>
+    <string name="reward_success" translatable="false">奖励发送成功</string>
+    <string name="reward_failed" translatable="false">奖励发送失败</string>
+    <string name="empty_content" translatable="false">内容不能为空</string>
+    <string name="empty_classid" translatable="false">无法请求</string>
+    <string name="response" translatable="false">回复</string>
+    <string name="take_photo" translatable="false">拍照</string>
+    <string name="choose_photo" translatable="false">选择图片</string>
+    <string name="default_share" translatable="false">我分享了一条班级圈消息</string>
+    <string name="network_error" translatable="false">网络异常</string>
+    <string name="request_failed" translatable="false">请求失败</string>
+    <string name="not_fill" translatable="false">未填写</string>
+
+    <!-- 全局 -->
+    <string name="edit_hint" translatable="false">请输入内容</string>
+
+
+    <!-- 投票 -->
+    <string name="vote_tips" translatable="false">投票成功后将无法修改投票选择,是否继续?</string>
+    <string name="continue_vote" translatable="false">继续提交</string>
+
+
+    <!-- 通知 /公告-->
+    <string name="notice_login_no" translatable="false">登录之后才能查看通知！</string>
+    <string name="notice_read_tips" translatable="false">用户姓名标记此颜色的代表已读</string>
+    <string name="notice_unread_tips" translatable="false">用户姓名标记此颜色的代表未读</string>
+    <string name="affiche" translatable="false">公告</string>
+    <string name="affiche_now_not" translatable="false">暂无公告</string>
+    <string name="notice_send_box" translatable="false">发件箱</string>
+    <string name="notice_edit_news" translatable="false">编辑信息</string>
+    <string name="notice_edit_send" translatable="false">发送</string>
+    <string name="content" translatable="false">内容</string>
+    <string name="contacts" translatable="false">联系人</string>
+    <string name="title" translatable="false">标题</string>
+    <string name="title_hint" translatable="false">点此输入标题（必填）</string>
+    <string name="context" translatable="false">内容</string>
+    <string name="context_hint" translatable="false">点此输入内容（选填）</string>
+    <string name="picture" translatable="false">图片</string>
+    <string name="record" translatable="false">录音</string>
+    <string name="none" translatable="false">无</string>
+    <string name="exa_zero" translatable="false">0</string>
+
+    <!-- 相册 -->
+    <!-- 获取图片 -->
+    <string name="upload_type" translatable="false">图片获取方式</string>
+    <string name="album" translatable="false">相册</string>
+    <string name="album_all" translatable="false">相簿</string>
+    <string name="selected_file_size" translatable="false">已选0B</string>
+    <string name="selected_file_num" translatable="false">确定(0)</string>
+    <string name="selected_file_clear" translatable="false">清空</string>
+    <string name="recent_photo" translatable="false">最近照片</string>
+    <!-- 网络加载 ：success、fail返回Toast-->
+    <string name="fail_refresh" translatable="false">网络异常！刷新失败</string>
+    <string name="fail_loadmore" translatable="false">网络异常！加载失败</string>
+    <string name="fail_do_not" translatable="false">网络异常！操作失败</string>
+    <string name="fail_send" translatable="false">网络异常！发送失败</string>
+    <string name="fail_delete" translatable="false">网络异常！删除失败</string>
+    <string name="success_delete_not" translatable="false">删除失败</string>
+    <string name="fail_send_head" translatable="false">网络异常,头像上传失败</string>
+    <string name="success_send_head" translatable="false">头像上传成功</string>
+    <string name="success_not_details" translatable="false">暂无内容</string>
+    <string name="success_loadmore_end" translatable="false">全部加载完毕</string>
+    <string name="success_sned" translatable="false">发送成功</string>
+    <string name="success_do" translatable="false">操作成功</string>
+    <string name="success_not_do" translatable="false">操作失败</string>
+    <string name="success_not_power" translatable="false">用户你没有权限</string>
+    <string name="success_user_out" translatable="false">注销成功</string>
+    <string name="fail_user_out" translatable="false">网络异常,注销失败,请重试</string>
+    <string name="success_not_more" translatable="false">没有更多了</string>
+    <string name="fail_login_not" translatable="false">网络异常，登录失败！</string>
+
+
+    <!-- 请假 -->
+    <string name="all_leave" translatable="false">全部请假</string>
+    <string name="checking_leave" translatable="false">待审核的请假</string>
+    <string name="passed_leave" translatable="false">已通过审核的请假</string>
+    <string name="unpassed_leave" translatable="false">未通过审核的请假</string>
+    <string name="upload_place" translatable="false">请选择发布位置</string>
+
+
+    <!--班级圈-->
+    <string name="graded_class_moments" translatable="false">班级圈</string>
+    <string name="graded_send_dynamic" translatable="false">发表动态</string>
+    <string name="graded_send_reward" translatable="false">发表奖励</string>
+    <string name="graded_dynamic_delete_tips" translatable="false">删除后将不能恢复此动态及其评论,是否继续？</string>
+    <string name="graded_send_content_hint" translatable="false">说点什么吧…</string>
+    <string name="graded_reward_stu" translatable="false">奖励学生</string>
+    <string name="graded_reward_count" translatable="false">奖励数量</string>
+    <string name="graded_reward_rank" translatable="false">奖励排行</string>
+    <string name="graded_reward_reason" translatable="false">奖励原因</string>
+    <string name="graded_reward_reason_hint" translatable="false">点此输入奖励原因</string>
+    <string name="graded_check_more" translatable="false">查看更多</string>
+    <string name="graded_deflaut_class" translatable="false">一年级一班</string>
+    <string name="graded_classes_all" translatable="false">@string/graded_class_moments</string>
+    <string name="select_class" translatable="false">请选择班级</string>
+
+    <!--  -->
+    <string name="tips_all_loaded" translatable="false">全部加载完毕</string>
+    <string name="tips_net_error_refresh" translatable="false">网络异常,刷新失败</string>
+    <string name="tips_net_error_refresh_retry" translatable="false">网络异常,刷新失败,请重试</string>
+    <string name="tips_net_error_loadmore" translatable="false">网络异常,加载更多失败</string>
+    <string name="tips_net_error_submit_homework" translatable="false">网络异常,提交作业失败</string>
+    <string name="tips_submit_success" translatable="false">提交成功</string>
+    <string name="tips_no_title" translatable="false">标题不能为空</string>
+    <string name="tips_select_class" translatable="false">请选择班级</string>
+    <string name="tips_pic_content_select" translatable="false">正文、图片需至少选择一项</string>
+    <string name="tips_upload_limit" translatable="false">已达到最大上传大小限制,请减少图片</string>
+    <string name="tips_net_error_get_classlist" translatable="false">网络异常,获取班级列表失败</string>
+    <string name="tips_net_error_get" translatable="false">网络异常,获取失败</string>
+    <string name="tips_net_error_change_homework_state" translatable="false">网络异常 ,审核失败,请重试</string>
+    <string name="tips_net_error_delete" translatable="false">网络异常,删除失败</string>
+    <string name="tips_no_leave_day_count" translatable="false">请填写请假天数</string>
+    <string name="tips_no_leave_reason" translatable="false">请填写请假理由</string>
+    <string name="tips_wait_check" translatable="false">申请成功,请等待审核</string>
+    <string name="tips_net_error_leave" translatable="false">网络异常,申请失败,请重试</string>
+    <string name="tips_net_error_leave_type" translatable="false">网络异常,获取请假类型失败</string>
+    <string name="tips_check_success" translatable="false">审批成功</string>
+    <string name="tips_net_error_check_fail" translatable="false">网络异常，审批失败</string>
+    <string name="tips_net_error_praise_fail" translatable="false">网络异常，点赞失败</string>
+    <string name="tips_net_error_reply_fail" translatable="false">网络异常，回复失败</string>
+    <string name="tips_net_error_send_dynamic_fail" translatable="false">网络异常,发表动态失败</string>
+    <string name="tips_export_dynamic_content" translatable="false">请输入动态正文</string>
+    <string name="tips_select_one_student" translatable="false">需至少选择一个学生</string>
+    <string name="tips_select_reward_star" translatable="false">请选择奖励星数</string>
+    <string name="tips_export_reward_reason" translatable="false">请填写奖励理由</string>
+    <string name="tips_publish_success" translatable="false">发表成功</string>
+    <string name="tips_send_success" translatable="false">发送成功</string>
+    <string name="tips_release_success" translatable="false">发步成功</string>
+    <string name="tips_release_fail" translatable="false">发步失败</string>
+    <string name="tips_send_reward_fail" translatable="false">发送奖励失败</string>
+    <string name="tips_comment_no_login" translatable="false">登录后才能发表评论</string>
+    <string name="tips_export_comment_content" translatable="false">请输入评论内容</string>
+    <string name="tips_comment_success" translatable="false">评论成功,正在审核中…</string>
+    <string name="tips_net_error_comment_fail" translatable="false">网络异常，评论失败</string>
+    <string name="tips" translatable="false">提示</string>
+    <string name="add_pic" translatable="false">添加图片</string>
+    <string name="news_upload_send" translatable="false">上传新闻</string>
+    <string name="cyclopedia_school" translatable="false">成都市实验小学校园百科</string>
+    <!--admin-->
+
+    <!--order-->
+    <string name="order_type_not" translatable="false">未通过</string>
+    <string name="order_type_yes" translatable="false">已通过</string>
+    <string name="order_type_in" translatable="false">待审核</string>
+    <string name="order_type_ing" translatable="false">审核中</string>
+    <string name="order_state" translatable="false">* 如需申请连续多个时间段，请申请多次，并在事由中标注。</string>
+    <string name="order_ok" translatable="false">确定约定</string>
+    <string name="order_please_achieve_content" translatable="false">请填写预约事由</string>
+    <string name="order_please_logistics_content" translatable="false">请填写备注事由</string>
+    <string name="order_apply_head" translatable="false">* 向左滑动，可撤销预约申请。</string>
+    <string name="order_apply_detail" translatable="false">* 点击可查看预约详情。（√：通过，×：未通过）</string>
+    <string name="order_room" translatable="false">功能室预约</string>
+    <string name="order_details" translatable="false">预约记录</string>
+    <string name="andmin_order" translatable="false">审核预约</string>
+    <string name="no_order" translatable="false">可预约</string>
+    <string name="yes_order" translatable="false">已预约</string>
+    <string name="ing_order" translatable="false">预约中</string>
+    <!--calende-->
+    <string name="sunday" translatable="false">日</string>
+    <string name="monday" translatable="false">一</string>
+    <string name="thesday" translatable="false">二</string>
+    <string name="wednesday" translatable="false">三</string>
+    <string name="thursday" translatable="false">四</string>
+    <string name="friday" translatable="false">五</string>
+    <string name="saturday" translatable="false">六</string>
+    <string name="dialogue" translatable="false">对话</string>
+
+    <string name="date_type" translatable="false">yyyy年MM月dd日</string>
+    <string name="date_type_2" translatable="false">yyyy-MM-dd</string>
+    <string name="date_type_3" translatable="false">yyyy/MM/dd</string>
+    <string name="date_type_1" translatable="false">yyyy-MM-dd HH:mm</string>
+    <string name="date_type_4" translatable="false">yyyy/MM/dd HH:mm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_admin_detail" translatable="false">AdminDetailActivity</string>
+    <string name="edit_content" translatable="false">编辑内容</string>
+
+
+    <!--vote-->
+    <string name="choice_question" translatable="false">选择题</string>
+    <string name="please" translatable="false">选择题</string>
+    <string name="topic" translatable="false">主题</string>
+    <string name="question" translatable="false">问题</string>
+    <string name="please_edit_content" translatable="false">请输入内容</string>
+
+    <!--student_award-->
+    <string name="award" translatable="false">奖励</string>
+    <string name="award_type" translatable="false">奖励类型</string>
+    <string name="award_score" translatable="false">奖励分数</string>
+    <string name="award_send_hint" translatable="false">点击编辑内容！</string>
+
+
+    <!-- 后勤报修 -->
+    <string name="maintain" translatable="false">后勤报修</string>
+    <string name="maintained" translatable="false">已维修</string>
+    <string name="maintain_audit" translatable="false">维修审核</string>
+    <string name="maintain_do" translatable="false">维修处理</string>
+    <string name="apply_organ_maintain" translatable="false">申请外修</string>
+    <string name="apply_maintain" translatable="false">申请维修</string>
+    <string name="maintain_state" translatable="false">维修状态</string>
+    <string name="maintain_apply_people" translatable="false">申请人</string>
+    <string name="maintain_describe" translatable="false">维修描述</string>
+    <string name="maintain_cost" translatable="false">维修费用</string>
+    <string name="maintain_add" translatable="false">新增维修</string>
+    <string name="maintain_end" translatable="false">维修结果</string>
+    <string name="maintain_success" translatable="false">完成维修</string>
+    <string name="maintain_reject" translatable="false">拒绝维修</string>
+    <string name="maintain_" translatable="false">维修结果</string>
+    <string name="pending" translatable="false">待维修</string>
+    <string name="processed" translatable="false">已处理</string>
+    <string name="refuse" translatable="false">退回</string>
+    <string name="applytime" translatable="false">申请时间:</string>
+    <string name="maintain_applytime" translatable="false">报修时间</string>
+    <string name="maintain_organ" translatable="false">报修部门</string>
+    <string name="exa_date" translatable="false">2018–11–19</string>
+    <string name="repair_dep" translatable="false">维修部门:</string>
+    <string name="exa_dep" translatable="false">信息技术部</string>
+    <string name="repair_place" translatable="false">报修地点</string>
+    <string name="repair_hint" translatable="false">请输入维修地点</string>
+    <string name="repair_item" translatable="false">故障简述:</string>
+    <string name="repair_item_hint" translatable="false">故障简述</string>
+    <string name="repair_pic" translatable="false">图片</string>
+
+
+    <string name="maintain_change_organ" translatable="false">转交</string>
+    <string name="maintain_audit_end" translatable="false">维修流程已结束</string>
+    <string name="maintain_audit_hint" translatable="false">点击编写审批意见</string>
+
+    <!--基础词-->
+    <string name="chioce" translatable="false">选择</string>
+    <string name="publish" translatable="false">发表</string>
+    <string name="notice" translatable="false">通知</string>
+    <string name="class_organized" translatable="false">班级圈</string>
+    <string name="jpush_have_now_msg" translatable="false">您有新消息，请注意查看！</string>
+    <string name="reject" translatable="false">拒绝</string>
+    <string name="rejected" translatable="false">已拒绝</string>
+    <string name="pass" translatable="false">通过</string>
+    <string name="back" translatable="false">返回</string>
+    <string name="delete" translatable="false">删除</string>
+    <string name="ok" translatable="false">确定</string>
+    <string name="cancel" translatable="false">取消</string>
+    <string name="all" translatable="false">全部</string>
+    <string name="audit" translatable="false">审核</string>
+    <string name="submit1" translatable="false">提交</string>
+    <string name="describe" translatable="false">描述</string>
+    <string name="money" translatable="false">钱</string>
+    <string name="cost" translatable="false">费用</string>
+    <string name="logistics" translatable="false">后勤部</string>
+    <string name="design" translatable="false">设计部</string>
+    <string name="finish" translatable="false">完成</string>
+    <string name="finished" translatable="false">已完成</string>
+    <string name="apply" translatable="false">申请</string>
+    <string name="apply_ing" translatable="false">申请中</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="people" translatable="false">人</string>
+    <string name="reply" translatable="false">回复</string>
+    <string name="release" translatable="false">发布</string>
+    <string name="shadow" translatable="false">阴影</string>
+    <string name="is_delete" translatable="false">是否删除！</string>
+    <string name="operation" translatable="false">操作</string>
+    <string name="award_tea_send_scan" translatable="false">请填写奖励描述</string>
+    <string name="atten" translatable="false">请假</string>
+    <string name="replace_head_portrait" translatable="false">更换头像</string>
+    <string name="out_login" translatable="false">退出登录</string>
+    <string name="get_date" translatable="false">获取时间</string>
+    <string name="get_honor_date" translatable="false">获奖日期</string>
+    <string name="chioce_date" translatable="false">获取时间</string>
+    <string name="honor_type" translatable="false">荣誉类型</string>
+    <string name="honor_rank" translatable="false">荣誉级别</string>
+    <string name="un_chioce" translatable="false">未选择</string>
+    <string name="title_activity_main2" translatable="false">Main2Activity</string>
+
+    <!--调课-->
+    <string name="course_exchanged" translatable="false">已换课</string>
+    <string name="exchange_course" translatable="false">调课</string>
+    <string name="exchange_able" translatable="false">1</string>
+    <string name="exchange_did_not_onclick" translatable="false">该节课已换课完成，不能再次进行换课！</string>
+    <string name="exchange_d_not_onclick" translatable="false">正在申请换课完成，不能再次进行换课！</string>
+    <string name="video" translatable="false">视频</string>
+
+    <string name="e_book_radio" translatable="false">电子书阅读</string>
+    <string name="file_massge" translatable="false">文件管理</string>
+    <string name="foot_book" translatable="false">食谱</string>
+    <string name="suggest" translatable="false">意见建议</string>
+    <string name="suggest_scan" translatable="false">*
+        您的意见或建议对我们非常重要，请认真填写，我们将根据您的意见或建议做出更美味更营养的食品，感谢您对学校工作的支持。（此留言不会公开显示）
+    </string>
+    <string name="all_subject" translatable="false">全部科目</string>
+
+
+    <!--校产-->
+    <string name="proprety_main" translatable="false">校产</string>
+
+
+    <string name="permission_fail_camere" translatable="false">调用摄像头 权限被拒绝，无法打开相机</string>
+    <string name="permission_fail_album" translatable="false">文件读写 权限被拒绝，无法访问文件</string>
+    <string name="permission_fail_call" translatable="false">权限禁止，无法拨号</string>
+    <!--<string name="title_activity_goods_do">GoodsDoActivity</string>-->
+    <!--duty-->
+    <string name="duty_title" translatable="false">行政值周</string>
+
+    <!--please-->
+    <string name="please_login" translatable="false">请您登录</string>
+    <string name="please_edit_phone" translatable="false">请输入手机号码</string>
+    <string name="please_edit_code" translatable="false">请输入验证码</string>
+    <string name="please_edit_yse_code" translatable="false">请输入正确的验证码</string>
+    <string name="please_choose" translatable="false">请选择</string>
+    <string name="please_edit_account" translatable="false">请输入账号</string>
+    <string name="please_edit_password" translatable="false">请输入密码</string>
+    <string name="please_admin_choose_password" translatable="false">请联系管理员更换密码！</string>
+    <string name="please_alter_edit_password" translatable="false">请再次输入新密码</string>
+    <string name="please_edit_new_password" translatable="false">请输入新密码</string>
+    <!--not-->
+    <string name="not_edit_phone_number" translatable="false">未录入电话号码</string>
+    <string name="not_edit_code" translatable="false">验证码输入错误</string>
+    <string name="title_activity_check_main">CheckMainActivity</string>
+
+</resources>

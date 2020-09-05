@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_marginTop="@dimen/margin_5dp">
+    <EditText
+        android:id="@+id/edit_people"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="请填写知道内容"
+        android:gravity="right|center_vertical"
+        android:textSize="@dimen/textsize7"
+        android:paddingRight="@dimen/margin_15dp"
+        android:background="@color/white"/>
+    <TextView
+        android:id="@+id/tea_add_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="获奖人数"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        />
+
+</RelativeLayout>

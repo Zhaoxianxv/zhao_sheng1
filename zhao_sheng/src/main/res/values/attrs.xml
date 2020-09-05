@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--mult-->
+    <declare-styleable name="MultiPictureView">
+        <attr name="space" format="dimension" />
+        <attr name="span" format="integer" />
+        <attr name="ratio" format="float" />
+        <attr name="imageLayoutMode" format="integer">
+            <enum name="DYNAMIC" value="1" />
+            <enum name="STATIC" value="2" />
+        </attr>
+        <attr name="max" format="integer"/>
+        <attr name="deleteDrawable" format="reference"/>
+        <attr name="addDrawable" format="reference"/>
+        <attr name="editable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="bottom">
+        <attr name="text" format="string" />
+        <attr name="normalRes" format="reference" />
+        <attr name="pressRes" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayout">
+        <attr name="drag_edge" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="top" value="2"/>
+            <enum name="bottom" value="3"/>
+        </attr>
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0"/>
+            <enum name="pull_out" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DotPointerLayout">
+        <attr name="selectedId" format="reference"/>
+        <attr name="unSelectedId" format="reference"/>
+        <attr name="dotNum" format="integer"/>
+        <attr name="horizonalSpacing" format="dimension"/>
+        <attr name="dotWidth" format="dimension"/>
+        <attr name="dotHeight" format="dimension"/>
+        <attr name="maxNum" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="Aabb">
+        <attr name="sshh" format="dimension" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="drawableTop" format="reference"/>
+        <attr name="drawableBottom" format="reference"/>
+        <attr name="drawableLeft" format="reference"/>
+        <attr name="drawableRight" format="reference"/>
+        <attr name="drawableWidth" format="dimension"/>
+        <attr name="drawableHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MenuLayout">
+        <attr name="itemSpacing" format="dimension"/>
+        <attr name="itemId" format="reference"/>
+        <attr name="itemCount" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="IndicateMenuLayout">
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="duration" format="integer"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="LoadingView">
+        <attr name="sourceId" format="reference"/>
+        <attr name="perCount" format="integer"/>
+        <attr name="intervalTime" format="integer"/>
+        <attr name="bar_width" format="dimension"/>
+        <attr name="bar_height" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CheckImageView">
+        <attr name="checked_drawable" format="reference"/>
+        <attr name="un_checked_drawable" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="DrawableEditText">
+        <attr name="drawableTops" format="reference"/>
+        <attr name="drawableBottoms" format="reference"/>
+        <attr name="drawableLefts" format="reference"/>
+        <attr name="drawableRights" format="reference"/>
+        <attr name="tWidth" format="dimension"/>
+        <attr name="tHeight" format="dimension"/>
+        <attr name="bWidth" format="dimension"/>
+        <attr name="bHeight" format="dimension"/>
+        <attr name="lWidth" format="dimension"/>
+        <attr name="lHeight" format="dimension"/>
+        <attr name="rWidth" format="dimension"/>
+        <attr name="rHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ClearEditText">
+        <attr name="l_drawable" format="reference"/>
+        <attr name="r_drawable" format="reference"/>
+        <attr name="l_Width" format="dimension"/>
+        <attr name="l_Height" format="dimension"/>
+        <attr name="r_Width" format="dimension"/>
+        <attr name="r_Height" format="dimension"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="PullToRefresh">
+
+        <!-- A drawable to use as the background of the Refreshable View -->
+        <attr name="ptrRefreshableViewBackground" format="reference|color" />
+
+        <!-- A drawable to use as the background of the Header and Footer Loading Views -->
+        <attr name="ptrHeaderBackground" format="reference|color" />
+
+        <!-- Text Color of the Header and Footer Loading Views -->
+        <attr name="ptrHeaderTextColor" format="reference|color" />
+
+        <!-- Text Color of the Header and Footer Loading Views Sub Header -->
+        <attr name="ptrHeaderSubTextColor" format="reference|color" />
+
+        <!-- Mode of Pull-to-Refresh that should be used -->
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0" />
+            <flag name="pullFromStart" value="0x1" />
+            <flag name="pullFromEnd" value="0x2" />
+            <flag name="both" value="0x3" />
+            <flag name="manualOnly" value="0x4" />
+
+            <!-- These last two are depreacted -->
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+        </attr>
+
+        <!-- Whether the Indicator overlay(s) should be used -->
+        <attr name="ptrShowIndicator" format="reference|boolean" />
+
+        <!-- Drawable to use as Loading Indicator. Changes both Header and Footer. -->
+        <attr name="ptrDrawable" format="reference" />
+
+        <!-- Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. -->
+        <attr name="ptrDrawableStart" format="reference" />
+
+        <!-- Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. -->
+        <attr name="ptrDrawableEnd" format="reference" />
+
+        <!-- Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. -->
+        <attr name="ptrOverScroll" format="reference|boolean" />
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views -->
+        <attr name="ptrHeaderTextAppearance" format="reference" />
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header -->
+        <attr name="ptrSubHeaderTextAppearance" format="reference" />
+
+        <!-- Style of Animation should be used displayed when pulling. -->
+        <attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0" />
+            <flag name="flip" value="0x1" />
+        </attr>
+
+        <!-- Whether the user can scroll while the View is Refreshing -->
+        <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
+
+        <!--
+        	Whether PullToRefreshListView has it's extras enabled. This allows the user to be
+        	able to scroll while refreshing, and behaves better. It acheives this by adding
+        	Header and/or Footer Views to the ListView.
+        -->
+        <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
+
+        <!--
+        	Whether the Drawable should be continually rotated as you pull. This only
+        	takes effect when using the 'Rotate' Animation Style.
+        -->
+        <attr name="ptrRotateDrawableWhilePulling" format="reference|boolean" />
+
+        <!-- BELOW HERE ARE DEPRECEATED. DO NOT USE. -->
+        <attr name="ptrAdapterViewBackground" format="reference|color" />
+        <attr name="ptrDrawableTop" format="reference" />
+        <attr name="ptrDrawableBottom" format="reference" />
+
+        <!-- 添加 -->
+        <attr name="forRefresh" format="boolean"></attr>
+        <attr name="headerLayout" format="reference"></attr>
+        <attr name="footerLayout" format="reference"></attr>
+    </declare-styleable>
+
+
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/check_add_parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/margin_45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/check_add_parent_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="考评类型"
+            android:textColor="@color/base_color" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/check_add_parent_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/gray"
+            android:text="@string/please_choose"
+            android:drawableRight="@drawable/ic_keyboard_arrow_right_gray_24dp"
+            />
+    </RelativeLayout>
+</LinearLayout>

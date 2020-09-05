@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/White"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/public_type_txt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:background="@color/White">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/contacts_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:tint="@color/Gray"
+            android:src="@drawable/ic_arrow_drop_right_black_24dp" />
+
+
+
+        <TextView
+            android:id="@+id/contacts_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/contacts_arrow"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            tools:text="name"
+            android:textColor="@color/base_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

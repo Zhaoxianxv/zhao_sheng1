@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/public_swip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/WhiteSmoke"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/coor_appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--contentScrim 改变后的颜色/ -->
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/coor_main_collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_collapseMode="parallax"
+                        app:layout_collapseParallaxMultiplier="0.7"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RelativeLayout
+                                android:id="@+id/coor_one_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/white"
+                                >
+                                <TextView
+                                    android:id="@+id/coor_one_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="功能室审核"
+                                    android:layout_marginLeft="@dimen/margin_10dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:textSize="@dimen/textsize7"/>
+                                <TextView
+                                    android:id="@+id/coor_count"
+                                    android:layout_width="@dimen/margin_20dp"
+                                    android:layout_height="@dimen/margin_20dp"
+                                    android:background="@drawable/bg_bottom_badge"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginRight="@dimen/margin_40dp"
+                                    android:text="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize5"/>
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                                    android:layout_marginRight="@dimen/margin_10dp"/>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/coor_two_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@id/coor_one_layout"
+                                android:background="@color/white"
+                                >
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_0.5dp"
+                                    android:background="@color/a3_gray"
+                                    android:layout_alignParentTop="true"/>
+                                <TextView
+                                    android:id="@+id/coor_two_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="需要后勤的预约"
+                                    android:layout_marginLeft="@dimen/margin_10dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:textSize="@dimen/textsize7"/>
+                                <TextView
+                                    android:id="@+id/two_count"
+                                    android:layout_width="@dimen/margin_20dp"
+                                    android:layout_height="@dimen/margin_20dp"
+                                    android:background="@drawable/bg_bottom_badge"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginRight="@dimen/margin_40dp"
+                                    android:text="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize5"/>
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                                    android:layout_marginRight="@dimen/margin_10dp"/>
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/coor_detail_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            tools:text="预约记录"
+                            android:textSize="@dimen/textsize5"
+                            android:gravity="center_vertical"
+                            android:background="@color/gray1"
+                            android:layout_alignParentBottom="true"
+                            android:paddingLeft="@dimen/margin_10dp"
+                            android:textColor="@color/DarkGray"/>
+                    </LinearLayout>
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/coor_top_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/gray"
+                        android:alpha="0"
+                        app:layout_collapseMode="pin">
+                        <TextView
+                            android:id="@+id/coor_top_text_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="预约记录"
+                            android:textSize="@dimen/textsize9"
+                            android:gravity="center_vertical"
+                            android:paddingTop="@dimen/margin_3dp"
+                            android:paddingBottom="@dimen/margin_3dp"
+                            android:textColor="@color/white"/>
+                    </android.support.v7.widget.Toolbar>
+
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/public_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+
+
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

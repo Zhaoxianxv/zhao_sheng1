@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/white">
+
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <ImageView
+            android:id="@+id/school_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/enroll_logo" />
+
+        <RelativeLayout
+            android:id="@+id/point_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/school_logo"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/radius4_whiteline"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/point"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/post_shape"
+                android:gravity="center"
+                android:text="@string/authente_point"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/school_logo"
+            android:layout_marginTop="14dp"
+            android:textSize="@dimen/small_size1"
+            android:textColor="@color/dark_gray"
+            android:background="@color/white"
+            android:text="@string/point_text"/>
+
+        <RelativeLayout
+            android:id="@+id/fill_in_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point_rela"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radius4_whiteline"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp" >
+
+            <RelativeLayout
+                android:id="@+id/name_rela"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/radius4_graybg_grayline" >
+
+                <ImageView
+                    android:id="@+id/baobao_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/baobao" />
+
+                <FrameLayout
+                    android:id="@+id/baobao_line"
+                    android:layout_width="1px"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/baobao_iv"
+                    android:background="@color/light_gray2" >
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/baobao_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/baobao_line"
+                    android:background="@null"
+                    android:hint="@string/authente_name_hint"
+                    android:textSize="@dimen/small_size1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/phone_rela"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/name_rela"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/radius4_graybg_grayline" >
+
+                <ImageView
+                    android:id="@+id/mishi_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/mishi" />
+
+                <FrameLayout
+                    android:id="@+id/mishi_line"
+                    android:layout_width="1px"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/mishi_iv"
+                    android:background="@color/light_gray2" >
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/mishi_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/mishi_line"
+                    android:background="@null"
+                    android:inputType="phone"
+                    android:hint="@string/authente_phone_hint"
+                    android:textSize="@dimen/small_size1" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/authente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/phone_rela"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/post_shape"
+                android:gravity="center"
+                android:text="@string/authente_text"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/authente"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/phone_tips"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/small_size" />
+        </RelativeLayout>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/point_rela"
+            android:layout_marginTop="4dp"
+            android:textSize="@dimen/small_size1"
+            android:textColor="@color/dark_gray"
+            android:background="@color/white"
+            android:text="@string/fill_in_text"/>
+    </RelativeLayout>
+
+</RelativeLayout>

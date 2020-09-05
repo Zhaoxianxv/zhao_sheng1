@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/public_type_txt_edit_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/textsize7"
+            android:text="小结"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10dp"/>
+
+        <EditText
+            android:id="@+id/public_type_txt_edit_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/margin_45dp"
+            android:background="@color/white"
+            android:hint="请填写内容"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/margin_10dp"
+            android:textSize="@dimen/textsize7"
+            android:layout_toRightOf="@id/public_type_txt_edit_key"
+            android:imeOptions="actionDone"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

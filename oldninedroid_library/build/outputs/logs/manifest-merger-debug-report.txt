@@ -1,0 +1,23 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:3:1-11:12
+INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:3:1-11:12
+INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:3:1-11:12
+INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:3:1-11:12
+INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:3:1-11:12
+INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:3:1-11:12
+INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:3:1-11:12
+	package
+		ADDED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:5:2-31
+		INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml
+		INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:7:2-29
+		INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml
+		INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:4:2-60
+	android:versionCode
+		ADDED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml:6:2-26
+		INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml
+		INJECTED from E:\baidu_tools\zhao_sheng1\oldninedroid_library\src\main\AndroidManifest.xml

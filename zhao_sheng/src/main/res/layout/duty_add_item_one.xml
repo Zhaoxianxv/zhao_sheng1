@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/margin_80dp"
+        android:layout_marginRight="@dimen/margin_5dp"
+        android:layout_marginLeft="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        app:cardCornerRadius="@dimen/margin_5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:id="@+id/duty_add_radio_group"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_marginRight="@dimen/margin_15dp"
+                android:background="@drawable/radius4_radio_group"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/duty_add_yes"
+                    android:layout_width="@dimen/margin_40dp"
+                    android:layout_height="@dimen/margin_25dp"
+                    android:button="@null"
+                    android:text="正常"
+
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize5"/>
+                <View
+                    android:layout_width="@dimen/margin_1dp"
+                    android:layout_height="@dimen/margin_25dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/red"
+                    />
+                <RadioButton
+                    android:id="@+id/duty_add_no"
+                    android:layout_width="@dimen/margin_40dp"
+                    android:layout_height="@dimen/margin_25dp"
+                    android:button="@null"
+                    android:text="异常"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize5"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/duty_add_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textSize="@dimen/textsize7"
+                android:layout_toLeftOf="@id/duty_add_radio_group"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/red"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginRight="@dimen/margin_5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical">
+                <com.yfy.view.multi.MultiPictureView
+                    android:id="@+id/duty_show_mult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:layout_marginRight="@dimen/margin_5dp"
+                    app:imageLayoutMode="STATIC"
+                    app:addDrawable="@color/white"
+                    app:editable="true"
+                    app:max="5"
+                    app:ratio="1"
+                    app:space="6dp"
+                    app:span="5"
+                    />
+                <com.yfy.view.multi.MultiPictureView
+                    android:id="@+id/duty_add_mult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:layout_marginRight="@dimen/margin_5dp"
+                    app:editable="true"
+                    app:max="5"
+                    app:ratio="1"
+                    app:space="2dp"
+                    app:span="5" />
+
+                <EditText
+                    android:id="@+id/duty_add_no_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/margin_50dp"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:background="@color/white"
+                    android:hint="请填写异常备注"
+                    android:gravity="start"
+                    android:textSize="@dimen/textsize7"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/duty_add_item_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:gravity="center"
+                android:textSize="@dimen/textsize5"
+                android:paddingTop="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_2dp"
+                android:paddingRight="@dimen/margin_8dp"
+                android:paddingLeft="@dimen/margin_8dp"
+                android:text="上传"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/red"
+                android:visibility="gone"
+                android:background="@drawable/radius3_whitebg_basecolorline"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_3dp"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

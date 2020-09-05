@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/event_class_layout">
+
+
+
+    <TextView
+        android:id="@+id/tag_item_txt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center_vertical|left"
+        android:textSize="@dimen/textsize9"
+        android:textColor="@color/Black"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:text="sssss"
+        />
+    <TextView
+        android:id="@+id/tag_item_adr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|left"
+        android:textSize="@dimen/textsize6"
+        android:textColor="@color/Black"
+        android:layout_below="@id/tag_item_txt"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:text="sssss"
+        />
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_5dp"
+        />
+    <com.yfy.view.textView.FlowLayout
+        android:id="@+id/event_class_item_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tag_item_adr"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginBottom="@dimen/margin_3dp"
+        android:layout_marginLeft="@dimen/margin_10dp"/>
+
+</RelativeLayout>

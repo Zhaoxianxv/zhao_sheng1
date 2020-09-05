@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/subjcet_item_layout"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/subjcet_stu_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:text="name"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/subjcet_stu_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius5_solid_goldenrod"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/margin_70dp"
+        android:text="已是优生"
+        android:textSize="@dimen/textsize5"
+        android:textColor="@color/white"
+        android:padding="@dimen/margin_5dp"
+        android:gravity="center"/>
+    <ImageView
+        android:id="@+id/subjcet_stu_selecter"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tick"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_10dp"/>
+
+</RelativeLayout>

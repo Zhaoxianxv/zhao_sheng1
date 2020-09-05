@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <RelativeLayout
+        android:id="@+id/order_main_item_layout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+
+
+
+        <ImageView
+            android:id="@+id/order_type_iv"
+            android:layout_width="@dimen/margin_40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/order_apply_red"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:padding="@dimen/margin_8dp"/>
+
+
+
+        <LinearLayout
+            android:layout_toRightOf="@id/order_type_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_3dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/order_room_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize7"
+                android:text="功能室"
+                android:layout_marginTop="@dimen/margin_2dp"
+                />
+            <TextView
+                android:id="@+id/order_time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize4"
+                android:textColor="@color/d_gray"
+                android:singleLine="true"
+                android:ellipsize="end"
+
+                android:text="(2月14日*第二节)"
+                android:layout_marginTop="@dimen/margin_3dp"
+                />
+            <TextView
+                android:id="@+id/order_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/textsize4"
+                android:text="@string/order_type_not"
+                android:paddingTop="@dimen/margin_2dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                />
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/order_apply_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize4"
+            android:textColor="@color/d_gray"
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:layout_alignParentRight="true"
+            android:text="(2月14日)"
+            android:layout_marginTop="@dimen/margin_5dp"
+            />
+    </RelativeLayout>
+</LinearLayout>

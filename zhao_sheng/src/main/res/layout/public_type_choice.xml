@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:background="@color/White">
+
+        <TextView
+            android:id="@+id/public_type_choice_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize7"
+            android:text="印章类型："/>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/public_type_choice_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/gray_text"
+            android:gravity="center_vertical|right"
+            android:drawableRight="@drawable/ic_keyboard_arrow_right_gray_24dp"
+            android:text="印章类型"/>
+    </RelativeLayout>
+
+</LinearLayout>

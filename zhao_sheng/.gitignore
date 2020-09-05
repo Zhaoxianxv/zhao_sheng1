@@ -1,0 +1,32 @@
+# a) #： 注释
+# b) /： 在匹配模式后代表目录； 在前表示根目录
+# c) !： 取反
+# d) *： 匹配多个字符， " *.class "表示所有.class后缀的文件
+# e) 指定文件： 直接写出文件名
+# f) []： 包含
+# 密钥储存库文件
+# 如果您不想检查密钥库文件，请取消注释以下行
+#*.jks
+##----------Android----------
+*.jks
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+/build
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+local.properties
+##----------idea----------
+*.iml
+.idea/
+*.ipr
+*.iws
+.navigation/
+##----------Other----------
+.DS_Store
+gradle.properties
+

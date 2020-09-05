@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/news_cover_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_150dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

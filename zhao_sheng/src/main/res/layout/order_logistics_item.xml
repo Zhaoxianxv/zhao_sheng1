@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/White"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/logistics_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/logistics_employ_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize5"
+            android:text="功能室"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:textColor="@color/a3_gray"
+            />
+        <TextView
+            android:id="@+id/logistics_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize9"
+            android:textColor="@color/DarkRed"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:text="功能室"
+            android:gravity="right"
+            android:layout_marginLeft="@dimen/margin_25dp"
+            />
+
+        <TextView
+            android:id="@+id/logistics_apply_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize5"
+            android:textColor="@color/d_gray"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_below="@id/logistics_name"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="(2月14日*第二节)"
+            android:layout_marginLeft="@dimen/margin_25dp"
+            />
+    </RelativeLayout>
+</LinearLayout>

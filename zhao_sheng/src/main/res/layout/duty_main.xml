@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/public_swip"
+    android:layout_width="match_parent"
+    android:background="#f4f4f4"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp">
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/duty_top_one"
+                    android:layout_width="@dimen/margin_0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/textsize6"
+                    android:text="校级行政值周"
+                    android:backgroundTint="@color/red"
+                    android:background="@drawable/ic_line_weight_black_24dp"
+                    android:gravity="center"
+                    android:textColor="@color/gray_text"
+
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/duty_top_two"
+                    android:layout_width="@dimen/margin_0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/textsize6"
+                    android:text="中层行政值周"
+                    android:background="@drawable/ic_line_weight_black_24dp"
+                    android:gravity="center"
+                    android:backgroundTint="@color/red"
+                    android:textColor="@color/gray_text"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/duty_main_time"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="#f4f4f4"
+                android:text="全部时间"
+                android:textColor="@color/gray_text" />
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/duty_main_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                    </android.support.v7.widget.RecyclerView>
+                </android.support.design.widget.CoordinatorLayout>
+
+
+                <include
+                    android:id="@+id/top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/public_item_singe_top_txt_center"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/duty_main_scan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/Green"
+            android:text="查看我的值周记录"
+            android:background="@color/Gainsboro"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+
+

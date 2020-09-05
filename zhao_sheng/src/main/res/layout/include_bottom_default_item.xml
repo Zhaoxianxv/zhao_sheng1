@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <RelativeLayout
+        android:id="@id/bottom_icon_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_3dp">
+
+
+
+        <ImageView
+            android:id="@id/bottom_icons"
+            android:layout_width="@dimen/margin_20dp"
+            android:layout_height="@dimen/margin_20dp"
+            android:padding="@dimen/margin_1dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_2dp"
+            />
+        <!--角标 小红点-->
+        <View
+            android:id="@id/bottom_badge"
+            android:layout_width="@dimen/margin_5dp"
+            android:layout_height="@dimen/margin_5dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin_2dp"
+            android:visibility="gone"
+            android:background="@drawable/bager_red_point"
+            />
+
+        <!--角标 带文字的-->
+
+        <TextView
+            android:id="@id/bottom_text_badge"
+            android:layout_width="@dimen/margin_13dp"
+            android:layout_height="@dimen/margin_13dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_bottom_badge"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@android:color/white"
+            android:textSize="8sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@id/bottom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize6"
+        android:layout_below="@+id/bottom_icon_box"
+        tools:text=""
+        />
+</merge>

@@ -1,0 +1,21 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+
+
+<dimen name="baobao_mishi">20dp</dimen>
+
+<dimen name="post_auth">20dp</dimen>
+
+
+<!-- 主界面 -->
+    <dimen name="block_size">65dp</dimen>
+    <dimen name="school_name_height">30dp</dimen>
+    <dimen name="name_offset">4dp</dimen>
+    <dimen name="block_image_padding">18dp</dimen>
+    
+    <dimen name="biglogo_size">110dp</dimen>
+</resources>

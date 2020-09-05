@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <com.yfy.view.swipe.xlist.XListView
+        android:id="@+id/cyc_person_editor_xlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:listSelector="@android:color/transparent"
+        android:dividerHeight="@dimen/margin_10dp"
+        android:divider="#c8c8c8"
+        >
+
+    </com.yfy.view.swipe.xlist.XListView>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="share_list">
+        <item>分享到微信</item>
+        <item>分享到朋友圈</item>
+        <item>分享到新浪微博</item>
+    </string-array>
+    <string-array name="default_des">
+        <item>奖励原因1</item>
+        <item>奖励原因2</item>
+        <item>奖励原因3</item>
+    </string-array>
+    <string-array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="integral_main_name">
+        <item>生长数据</item>
+        <item>家庭数据</item>
+        <item>学生评价</item>
+        <item>课表与选课</item>
+        <item>积分详情</item>
+    </string-array>
+
+
+</resources>

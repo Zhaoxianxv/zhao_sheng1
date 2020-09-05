@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yfy.app.integral.subjcet.SubjcetDoActivity">
+
+    <LinearLayout
+        android:id="@+id/bottem_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/subjcet_do_del"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/oranges"
+            android:text="取消优生"
+            android:textSize="@dimen/textsize8"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/subjcet_do_add"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/DarkGreen"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize8"
+            android:text="设为优生"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_above="@id/bottem_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/subjcet_do_stulist_xlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cyc_searc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical">
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <com.yfy.view.ClearEditText
+        android:id="@+id/cyc_search_et"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/margin_30dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_30dp"
+        android:singleLine="true"
+        android:background="@drawable/notice_search_et_bg"
+        android:hint="@string/content"
+        android:paddingRight="40dp"
+        app:l_Height="35dp"
+        app:l_Width="30dp"
+        app:l_drawable="@drawable/notice_search"
+        app:r_Height="30dp"
+        app:r_Width="30dp"
+        app:r_drawable="@drawable/x" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginLeft="@dimen/margin_20dp">
+
+        <TextView
+            android:id="@+id/tips_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="没有更多"
+            android:textColor="#777777"
+            android:textSize="@dimen/textsize11"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#00000000"
+            android:listSelector="@android:color/transparent"
+            android:dividerHeight="@dimen/margin_5dp"
+
+            android:scrollbars="none" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

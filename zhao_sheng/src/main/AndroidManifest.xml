@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.zhao_sheng">
+
+    <!-- 储存卡的读写权限 -->
+    <!-- 调用相机权限 -->
+    <!-- Required 一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 8.0 允许安装未知来源权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- jpush -->
+    <permission
+        android:name="com.example.zhao_sheng.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.zhao_sheng.permission.JPUSH_MESSAGE" />
+
+    <!-- 9.0 网络适配android:networkSecurityConfig="@xml/network_security_config" -->
+    <!-- android:Debugable="false"shi  调试 -->
+    <!-- android:allowBackup="false" 备份 -->
+    <application
+        android:name="com.yfy.base.App"
+        android:allowBackup="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:persistent="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+
+        <!-- android:exported="false"  组件共享 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.zhao_sheng.fileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- 主界面 -->
+
+        <activity
+            android:name="com.yfy.app.LaunchActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeInitial">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ********************* -->
+        <!-- jpush 配置信息 -->
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.yfy.jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <!-- 小红点，处理 -->
+                <action android:name="zxx.intent.badge" />
+
+                <category android:name="com.example.zhao_sheng" />
+            </intent-filter>
+        </receiver>
+        <!-- </>?????????????????????????????????AppKey -->
+
+
+        <!-- ********************* -->
+        <activity
+            android:name="com.yfy.app.SelectedTermActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.ContactSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.EditTextActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.VsionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.app.ChoiceTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.yfy.app.slide.CheckMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.album.AlbumAllActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeWindow" />
+        <activity
+            android:name="com.yfy.app.album.AlbumOneActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeWindow" />
+        <activity
+            android:name="com.yfy.app.album.SingePicShowActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeWindow" />
+        <activity
+            android:name="com.yfy.app.album.MultPicShowActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeWindow" />
+
+        <!-- school -->
+        <activity
+            android:name="com.yfy.app.school.SchoolNewsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.NewsDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <!-- notice -->
+        <activity
+            android:name="com.yfy.app.notice.cyc.NoticeActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.notice.cyc.SendBoxActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.notice.cyc.OutBoxDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.notice.cyc.NoticeDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.notice.cyc.NoticeAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.notice.cyc.ContactsInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.notice.cyc.ContactsSelectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.notice.cyc.ContactSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.upload.UpDataDialogActivity"
+            android:theme="@style/AppThemeDialog" />
+
+        <service
+            android:name="com.yfy.upload.UploadDataService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.yfy.app.HomeNewActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.MainSetViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.login.TeaResetStuPassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.login.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.login.ResetPasswordToHavePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.login.ChangePasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 招生模块 -->
+        <activity
+            android:name="com.yfy.app.info_submit.activity.AuthenticationActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.info_submit.activity.FormShowActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.info_submit.activity.FormWriteActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.info_submit.activity.FormWriteItemActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 校园新闻 -->
+
+
+        <!-- 公告 -->
+        <activity
+            android:name="com.yfy.app.affiche.AfficheActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.affiche.AffWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 班级圈 -->
+        <activity
+            android:name="com.yfy.app.allclass.ShapeSingleActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.allclass.ShapeSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.allclass.EditReplyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.allclass.ShapeDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 后勤报修 -->
+
+
+        <!-- 投票 -->
+        <activity
+            android:name="com.yfy.app.vote.VoteListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.vote.VoteDetailActicity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.yfy.app.login.AlterCllActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 通知 -->
+        <activity
+            android:name="com.yfy.app.pro.PropertyActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.pro.AddPropertyActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.pro.AddSupplyActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.pro.ClassPropertyActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.pro.PropertyDetailActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.pro.SupplyTypeActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+
+        <!-- 财产清理 -->
+        <activity
+            android:name="com.yfy.app.property.PropertyMainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <activity
+            android:name="com.yfy.app.property.PropertyTermActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <!-- 调休 -->
+
+
+        <!-- 德育结果 -->
+        <activity
+            android:name="com.yfy.app.DeyuCheckActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/activity_change_theme" />
+
+        <!-- cyclopedia 百科 -->
+        <activity
+            android:name="com.yfy.app.cyclopedia.CyclopediaSchoolActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_change_theme" />
+        <!-- 班级圈 -->
+
+        <activity
+            android:name="com.yfy.app.allclass.ShapeDynamicActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- **************************** -->
+        <activity
+            android:name="com.yfy.app.cyclopedia.CycSearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.cyclopedia.CycDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.cyclopedia.CycEditorDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.cyclopedia.CycEditActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.cyclopedia.SearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- order -->
+        <activity
+            android:name="com.yfy.app.appointment.OrderLogisticsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.appointment.OrderLogisticsShowActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.appointment.OrderAdminDoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.appointment.AdminDoScroeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.appointment.OrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.appointment.CalendarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.appointment.OrderApplicationActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.yfy.app.appointment.AdminOrderActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.appointment.AdminDoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_admin_detail"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.appointment.ChioceTagActivity"
+            android:exported="false"
+            android:label="@string/title_activity_admin_detail"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.appointment.ChioceRoomActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.appointment.OrderAddChangeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_admin_detail"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme" />
+
+        <!-- 后勤保修 -->
+
+
+        <!-- 学生奖励 -->
+        <activity
+            android:name="com.yfy.app.studen_award.AwardMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.studen_award.AwardSendActivity"
+            android:configChanges="keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.studen_award.AwardDialogActivity"
+            android:theme="@style/AppThemeDialog" />
+        <activity
+            android:name="com.yfy.app.studen_award.AwardClassTabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.studen_award.AwardChioceStuActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.studen_award.AwardSearchStuActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.studen_award.AwardTypeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.studen_award.AwardItemAditorActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.yfy.app.allclass.ShapeChioceTagActivity" />
+
+        <!-- integral -->
+        <activity
+            android:name="com.yfy.app.integral.HonorTeaChioceStuActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.HonorTeaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.HonorTeaDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.IntegralMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.IntegralListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.ChangeTermActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.ChangeSubjectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.IntegralGrowActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.IntegralFamilyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.IntegralEditActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.integral.AddHonorActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.integral.IntegralHonorActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.HonorTypeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.integral.HonorRankActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.answer.AnswerMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.answer.AnswerItemDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.answer.AnswerItemDetailNewsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.answer.AddAnswerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.answer.AddQuestionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.exchang.ExchangeMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.exchang.ExchangeDoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.exchang.EXchangeRequestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.exchang.ExchangeDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.exchang.ExchangeAcceptActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.WebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.ebook.EbookListMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.video.VideoListMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.ebook.TagChioceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.footbook.FootBookMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.footbook.FootDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.footbook.FootSuggestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.upload.DownLoadActivity"
+            android:theme="@style/AppThemeDialog" />
+        <activity
+            android:name="com.yfy.app.integral.TermidCommtActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.integral.SubjectGoodDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.integral.SubjectGoodTeaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.integral.SubjectGoodStuActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.ebook.FileAdminActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.login.UserBaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yfy.app.maintainnew.MaintainNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.maintainnew.MaintainNewAdminActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.maintainnew.MaintainNewAddActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.maintainnew.MaintainNewDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.maintainnew.MaintainNewDetailAdminActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.maintainnew.MaintainTagActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yfy.app.maintainnew.MaintainEditActivity"
+            android:theme="@style/AppThemeDialog"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.maintainnew.MaintainDoingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.attennew.AttenNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.attennew.SelectMasterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.attennew.AttenNewDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.attennew.AttenNewDetailAdminActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.attennew.AttenNewAdminActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.attennew.AttenAddActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.integral.subjcet.SubjcetTeaSetActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.yfy.app.integral.subjcet.SubjcetDoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.yfy.app.property.PropertyRoomActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.property.PropertyBadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.yfy.app.allclass.ShapeUserDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.yfy.app.tea_evaluate.TeaEvaluateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_evaluate.ChartEvaluateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_evaluate.TeaEvaluateAddActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.tea_evaluate.TeaTagActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_evaluate.TeatabActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_evaluate.ItemtabActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_evaluate.ChartDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_evaluate.RedactActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name="com.yfy.app.tea_evaluate.TeaEvaItemActivity" />
+
+        <!-- goods -->
+        <activity
+            android:name="com.yfy.app.goods.GoodsIndexctivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsADminActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsMasterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsTagActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsSchoolAddActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsAdminDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.ContentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsAdminContactsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsAddTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsAddGoodsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsSchoolActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsAddActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.goods.GoodsDoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.goods.GoodNumUserListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.goods.GoodNumAdminListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.goods.GoodNumByidActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.goods.GoodNumDoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- duty -->
+        <activity
+            android:name="com.yfy.app.duty.DutyMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.duty.DutyTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.duty.DutyChoiceTimeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.duty.DutyAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.duty.DutyNotAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.duty.DutyChangeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.ContactSingeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.duty.DutyTagActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.duty.DutyDateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+
+        <!-- event -->
+        <activity
+            android:name="com.yfy.app.event.EventAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.event.EventDepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.event.EventWeekActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.event.ChoiceWeekActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.event.EventMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.event.EventMyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.event.EventAlterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_event.TeaMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_event.TeaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_event.TeaDActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_event.TeaStuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.tea_event.TeaDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.tea_event.DialogActivity"
+            android:theme="@style/AppThemeDialog" />
+        <!-- chceck -->
+        <activity
+            android:name="com.yfy.app.check.CheckTypeActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckTjActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckTjParentActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckTjStuActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CEditActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckClassActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckDetailActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckStuActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckGetStuToIllActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckStuParentDetailActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckStuListActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckStuAddParentActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.check.CheckStuAddChildActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+
+        <!-- seal -->
+        <activity
+            android:name="com.yfy.app.seal.SealMainListActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.seal.SealAdminListActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.seal.SealMasterListActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.seal.SealApplyActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.seal.SealEditResetApplyActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.seal.SealResetApplyActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.seal.SealDetailNewActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.seal.SealAdminDoActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.seal.SealTagActivity"
+            android:label="@string/title_activity_check_main"
+            android:theme="@style/AppThemeCompat" />
+        <!-- event -->
+        <activity
+            android:name="com.yfy.app.delay_service.ChoiceClassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.EventStuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+
+        <activity
+            android:name="com.yfy.app.delay_service.DelayServiceMasterMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayGetAdminToClassEventDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayServiceStuDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayTeaToClassSetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayTeaToStuMoreSetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayTeaToStuSingeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayAdminToTeaEventActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayServiceOperActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.EventAlterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayServiceSetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayAbsClassDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.DelayMasterAdminListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.delay_service.EventDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+<!--boss-->
+
+        <activity
+            android:name="com.yfy.app.oashow.BossMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.oashow.BMaintianActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.oashow.BMaintainDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.oashow.BAttenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.oashow.BOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.oashow.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+
+        <!--process-->
+        <activity
+            android:name="com.yfy.app.process.ProcessMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessAdminListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessRoomDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessAdminDoingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessRoomAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessAddSealActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessSelectUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessListSelectMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessSelectUserAllActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+        <activity
+            android:name="com.yfy.app.process.ProcessRoomGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCompat" />
+    </application>
+
+</manifest>

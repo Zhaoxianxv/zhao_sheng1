@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/event_head_icon"
+        android:layout_width="@dimen/margin_50dp"
+        android:layout_height="@dimen/margin_50dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:src="@drawable/oval_gray"
+        android:layout_alignParentLeft="true"/>
+
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/event_stu_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:drawableTint="@color/app_base_color"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="@dimen/textsize7"
+        android:layout_marginTop="@dimen/margin_20dp"
+
+        android:text="13705654321"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/event_head_icon"
+        android:layout_marginLeft="@dimen/margin_5dp"
+        android:layout_toLeftOf="@id/event_stu_tag">
+        <TextView
+            android:id="@+id/event_stu_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize8"
+            android:singleLine="true"
+            android:text="name"/>
+        <TextView
+            android:id="@+id/event_stu_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize7"
+            android:layout_below="@id/event_stu_name"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="content"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/event_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textSize="@dimen/textsize7"
+        android:layout_below="@id/event_head_icon"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:text="name"/>
+    <TextView
+        android:id="@+id/event_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textSize="@dimen/textsize7"
+        android:layout_below="@id/event_one"
+        android:text="name"/>
+    <TextView
+        android:id="@+id/event_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textSize="@dimen/textsize7"
+        android:layout_below="@id/event_two"
+        android:text="name"/>
+    <com.yfy.view.multi.MultiPictureView
+        android:id="@+id/shape_main_item_mult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:layout_marginLeft="@dimen/margin_5dp"
+        android:layout_marginRight="@dimen/margin_5dp"
+        android:layout_below="@id/event_three"
+        app:imageLayoutMode="STATIC"
+        app:max="9"
+        app:ratio="1"
+        app:space="6dp"
+        app:span="5"
+        />
+</RelativeLayout>

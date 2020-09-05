@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f3f3f3"
+    android:orientation="vertical">
+
+    <com.yfy.view.SQToolBar
+        style="@style/App_SQToolbar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_45dp"
+                android:background="@color/white"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="分类"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:textSize="@dimen/textsize11"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/shape_add_dynamic_typy_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="未选择"
+                    android:textColor="@color/hint"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/app_setting_icon"
+                    android:drawablePadding="@dimen/margin_5dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:textSize="@dimen/textsize11"
+                    android:gravity="center_vertical|right"/>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/sendContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="top"
+                android:layout_marginTop="15dp"
+                android:hint="@string/graded_send_content_hint"
+                android:maxHeight="@dimen/margin_220dp"
+                android:minHeight="@dimen/margin_150dp"
+                android:padding="@dimen/margin_10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@color/white">
+                <com.yfy.view.multi.MultiPictureView
+                    android:id="@+id/shape_add_mult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    app:editable="true"
+                    app:max="9"
+                    app:ratio="1"
+                    app:space="2dp"
+                    app:span="4" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

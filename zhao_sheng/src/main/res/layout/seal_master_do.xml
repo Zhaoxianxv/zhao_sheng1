@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/WhiteSmoke"
+    android:orientation="vertical">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/seal_do_reason_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="点击输入说明"
+                    android:minHeight="@dimen/margin_100dp"
+                    android:padding="@dimen/margin_10dp"
+                    android:textSize="@dimen/textsize9" />
+
+                <com.yfy.view.multi.MultiPictureView
+                    android:id="@+id/seal_do_reason_multi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    app:editable="true"
+                    app:max="9"
+                    android:visibility="gone"
+                    app:ratio="1"
+                    app:space="2dp"
+                    app:span="4" />
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layer_top_bottom_gray"
+                android:text="审核操作"
+                android:paddingTop="@dimen/margin_5dp"
+                android:paddingBottom="@dimen/margin_5dp"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:backgroundTint="@color/WhiteSmoke"
+                android:textSize="@dimen/textsize7"
+
+                android:textColor="@color/Gray"
+                />
+
+            <android.support.design.internal.FlowLayout
+                android:id="@+id/seal_do_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                app:itemSpacing="10dp"
+                app:lineSpacing="@dimen/margin_5dp"
+
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

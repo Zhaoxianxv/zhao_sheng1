@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="#c3c3c3"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/oa_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:text="学生综合评价"
+        android:gravity="center"
+        android:textColor="@color/Maroon"
+        android:textSize="@dimen/textsize8"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_5dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#c3c3c3"/>
+</LinearLayout>

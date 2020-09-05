@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/notice_main_item_layout"
+        android:background="@color/White"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/margin_5dp"
+        android:paddingTop="@dimen/margin_3dp"
+        android:layout_height="64dp">
+
+
+        <TextView
+            android:id="@+id/notice_main_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:text="2015-5-12" />
+
+        <TextView
+            android:id="@+id/notice_main_item_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_toLeftOf="@id/notice_main_item_time"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:text="我是内容我是内容我是内容我是内容我是内容我是内容"
+            android:textColor="#777777" />
+
+        <TextView
+            android:id="@+id/notice_main_item_read_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:paddingLeft="@dimen/margin_8dp"
+            android:paddingRight="@dimen/margin_8dp"
+            android:paddingTop="@dimen/margin_2dp"
+            android:paddingBottom="@dimen/margin_2dp"
+            android:gravity="center"
+            android:textSize="@dimen/textsize4"
+            android:textColor="@color/white"
+            android:background="@drawable/radius3_e3bg"
+            android:text="已读"
+            />
+
+        <TextView
+            android:id="@+id/notice_main_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/notice_main_item_read_tag"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="我是标题"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_5dp"
+            android:textColor="#444444"
+            android:textSize="@dimen/textsize7"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

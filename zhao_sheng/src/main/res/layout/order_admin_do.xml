@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:orientation="vertical">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_50dp"
+        android:layout_marginTop="55dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp">
+                <ImageView
+                    android:id="@+id/head_pic"
+                    android:layout_width="@dimen/margin_60dp"
+                    android:layout_height="@dimen/margin_60dp"
+                    />
+                <TextView
+                    android:id="@+id/head_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_3dp"
+                    android:layout_toRightOf="@id/head_pic"
+                    android:textSize="@dimen/textsize7"
+                    android:layout_marginLeft="@dimen/margin_15dp"
+                    android:text="name"
+                    />
+                <TextView
+                    android:id="@+id/head_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:textSize="@dimen/textsize5"
+                    android:textColor="#999999"
+                    android:text="time"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/c3_gray"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:textSize="@dimen/textsize9"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:text="预约详情"/>
+                <TextView
+                    android:id="@+id/head_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize7"
+                    android:layout_marginRight="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:layout_alignParentRight="true"
+                    android:text="已通过"
+                    />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/room_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="room"/>
+            <TextView
+                android:id="@+id/room_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="date"/>
+            <TextView
+                android:id="@+id/room_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="time"/>
+            <TextView
+                android:id="@+id/room_is_logis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="is-logis"/>
+            <TextView
+                android:id="@+id/room_logis_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="logis-content"
+                />
+            <TextView
+                android:id="@+id/room_is_maintain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="is-maintain"/>
+            <TextView
+                android:id="@+id/room_maintain_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="maintain-content"
+                />
+
+            <TextView
+                android:id="@+id/room_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:text="room-content"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/c3_gray"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_30dp"
+                android:background="@color/WhiteSmoke"/>
+            <RelativeLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+                <RatingBar
+                    android:id="@+id/score_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="1"
+                    android:isIndicator="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_3dp"
+                    android:clickable="false"
+                    android:visibility="gone"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_alignParentRight="true" />
+                <TextView
+                    android:id="@+id/boottom_reply_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/margin_50dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="@dimen/margin_0.5dp"
+
+                    android:text="name"
+                    />
+                <TextView
+                    android:id="@+id/score_rating_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_60dp"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:textColor="@color/hint"
+                    android:text="name"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    />
+                <Button
+                    android:id="@+id/do_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="点击评价"
+                    android:visibility="gone"
+                    android:textColor="@color/main_red"
+                    android:layout_marginRight="@dimen/margin_5dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/c3_gray"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/c3_gray"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_layout_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_25dp"
+                    android:text="其他申请人"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_25dp"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:scrollbars="none"
+                    >
+                    <LinearLayout
+                        android:id="@+id/bottom_line_layout"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/a3_gray"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/a3_gray"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_do_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+
+
+        <Button
+            android:id="@+id/bottom_do_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="审核"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

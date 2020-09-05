@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:layout_height="match_parent"
+    tools:context="com.yfy.app.delay_service.DelayServiceSetActivity">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/layer_top_bottom_grayline_whitebg"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:textColor="@color/app_base_color"
+                android:text="巡查时间：" />
+            <TextView
+                android:id="@+id/delay_admin_set_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:padding="10dp"
+                android:text="@string/exa_date"
+                android:textColor="@color/gray"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                android:drawablePadding="@dimen/margin_10dp"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/margin_1dp"
+            android:background="@drawable/layer_top_bottom_grayline_whitebg">
+            <EditText
+                android:id="@+id/delay_service_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/margin_100dp"
+                android:background="@color/white"
+                android:gravity="start"
+                android:paddingStart="@dimen/margin_10dp"
+                android:hint="课后服务工作情况" />
+            <com.yfy.view.multi.MultiPictureView
+                android:id="@+id/delay_service_multi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                app:editable="true"
+                app:max="9"
+                app:ratio="1"
+                app:space="2dp"
+                app:span="5" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/margin_1dp"
+            android:background="@drawable/layer_top_bottom_grayline_whitebg">
+            <EditText
+                android:id="@+id/delay_end_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/margin_100dp"
+                android:background="@color/white"
+                android:gravity="start"
+                android:paddingStart="@dimen/margin_10dp"
+                android:hint="组织放学工作情况" />
+            <com.yfy.view.multi.MultiPictureView
+                android:id="@+id/delay_end_multi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                app:editable="true"
+                app:max="9"
+                app:ratio="1"
+                app:space="2dp"
+                app:span="5" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

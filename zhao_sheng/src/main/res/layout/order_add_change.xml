@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/order_add_swip"
+    android:layout_width="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:background="@drawable/layer_top_bottom_w">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="15dip"
+                android:text="申请日期："
+                android:layout_weight="1"
+                android:textColor="@color/app_base_text_color"
+                android:gravity="center"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/order_apply_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2015年11月02 周几"
+                android:gravity="right|center_vertical"
+                android:paddingRight="@dimen/margin_30dp"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/textsize9" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:background="@drawable/layer_top_bottom_w">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="15dip"
+                android:text="申请地点："
+                android:layout_weight="1"
+                android:textColor="@color/app_base_text_color"
+                android:gravity="center"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/order_apply_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="未选择"
+                android:gravity="right|center_vertical"
+                android:paddingRight="@dimen/margin_30dp"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/textsize9" />
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/apply_room"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_5dp">
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

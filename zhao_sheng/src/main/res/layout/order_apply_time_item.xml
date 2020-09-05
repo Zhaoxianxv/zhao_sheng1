@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@drawable/layer_top_bottom_w">
+
+        <TextView
+            android:id="@+id/order_apply_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="未选择"
+            android:gravity="right|center_vertical"
+            android:layout_marginTop="@dimen/margin_1dp"
+            android:layout_marginBottom="@dimen/margin_1dp"
+            android:paddingRight="@dimen/margin_20dp"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/textsize9" />
+        <TextView
+            android:id="@+id/order_apply_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="15dip"
+            android:text="地点"
+            android:layout_weight="1"
+            android:textColor="@color/app_base_text_color"
+            android:gravity="center"/>
+    </RelativeLayout>
+</RelativeLayout>

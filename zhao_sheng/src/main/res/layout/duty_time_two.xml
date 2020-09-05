@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/duty_time_layout"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/duty_time_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:textColor="@color/red"
+        android:text="@string/del"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/textsize6"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_30dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/duty_time_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notice"
+            android:textSize="@dimen/textsize4"/>
+        <TextView
+            android:id="@+id/duty_time_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_3dp"
+            android:text="@string/notice"
+            android:textSize="@dimen/textsize4"
+            android:layout_below="@id/duty_time_state"/>
+    </LinearLayout>
+</RelativeLayout>

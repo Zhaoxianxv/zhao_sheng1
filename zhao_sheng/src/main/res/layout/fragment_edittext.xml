@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/item_idit_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/item_edittext"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+             />
+
+        <TextView
+            android:id="@+id/postfix_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kg"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/wu_rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/item_idit_rela"
+        android:background="@color/light_gray2"
+        android:paddingTop="10dp" 
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/wu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/oavl_red"
+            android:gravity="center"
+            android:text="@string/wu"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/if_wu_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/wu"
+            android:text="若暂无“幼儿园”，请点击..."
+            android:textColor="@color/red" />
+    </RelativeLayout>
+    
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

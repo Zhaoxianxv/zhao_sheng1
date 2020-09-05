@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray01"
+
+    >
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <ImageView
+        android:layout_width="@dimen/margin_130dp"
+        android:layout_height="@dimen/margin_130dp"
+        android:src="@drawable/cyc_logo"
+        android:background="@drawable/oval_white_line2_red"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_50dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cyclopedia_school"
+        android:textColor="@color/main_red"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:textSize="@dimen/textsize11"
+        android:gravity="center_horizontal"/>
+
+
+    <com.yfy.view.ClearEditText
+        android:id="@+id/cyc_search_et"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/margin_50dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_50dp"
+        android:singleLine="true"
+        android:background="@drawable/notice_search_et_bg"
+        android:hint="@string/content"
+        android:paddingRight="40dp"
+        app:l_Height="35dp"
+        app:l_Width="30dp"
+        app:l_drawable="@drawable/notice_search"
+        app:r_Height="30dp"
+        app:r_Width="30dp"
+        app:r_drawable="@drawable/x" />
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_30dp"/>
+    <!--<HorizontalScrollView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scrollbars="none">-->
+    <com.yfy.view.MyRadioGroup
+        android:id="@+id/hot_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </com.yfy.view.MyRadioGroup>
+    <!--</HorizontalScrollView>-->
+
+
+
+</LinearLayout>

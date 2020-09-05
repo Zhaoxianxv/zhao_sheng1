@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_40dp"
+    android:minHeight="@dimen/margin_50dp"
+    android:gravity="center_vertical"
+    android:background="@color/White"
+    android:paddingStart="@dimen/margin_10dp"
+    android:paddingRight="@dimen/margin_15dp"
+    android:text="@string/date_type"
+    android:textSize="@dimen/textsize7"
+    android:checkMark="?android:attr/listChoiceIndicatorSingle" />
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <ListView
+        android:id="@+id/album_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/gray"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/gray"
+        android:scrollbars="" >
+    </ListView>
+
+</LinearLayout>

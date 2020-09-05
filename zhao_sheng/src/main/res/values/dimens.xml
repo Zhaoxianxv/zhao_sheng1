@@ -1,0 +1,149 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="small_size">11sp</dimen>
+    <dimen name="small_size1">13sp</dimen>
+    <dimen name="baobao_mishi">20dp</dimen>
+    <dimen name="post_auth">20dp</dimen>
+    <dimen name="back_left_margin">10dp</dimen>
+    <dimen name="head">50dp</dimen>
+    <dimen name="edittext_height">40dp</dimen>
+    <dimen name="bottom_item_size">22dp</dimen>
+    <dimen name="bottom_menu_height">44dp</dimen>
+    <dimen name="bottom_menu_edittext">38dp</dimen>
+
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+    <!-- head -->
+    <dimen name="head_back_png">22dp</dimen>
+    <dimen name="head_ok_png">18dp</dimen>
+    <dimen name="head_back2_width">60dp</dimen>
+    <!-- 主界面 -->
+    <dimen name="logo_lila_padding">25dp</dimen>
+    <dimen name="block_size">60dp</dimen>
+    <dimen name="school_name_height">24dp</dimen>
+    <dimen name="name_offset">4dp</dimen>
+    <dimen name="edittext_left">5dp</dimen>
+    <dimen name="block_image_padding">20dp</dimen>
+    <dimen name="set_rela_height">40dp</dimen>
+    <dimen name="set_text_height">50dp</dimen>
+    <dimen name="biglogo_size">110dp</dimen>
+    <dimen name="dot_tv_size">20dp</dimen>
+
+    <!-- 招生 -->
+    <dimen name="arrow_size">20dp</dimen>
+
+    <!-- 招生填写二级界面 -->
+    <dimen name="item_margin_top">23dp</dimen>
+    <dimen name="item_margin_bottom">23dp</dimen>
+
+    <!-- 字体 -->
+    <dimen name="textsize1">8sp</dimen>
+    <dimen name="textsize2">9sp</dimen>
+    <dimen name="textsize3">10sp</dimen>
+    <dimen name="textsize4">11sp</dimen>
+    <dimen name="textsize5">12sp</dimen>
+    <dimen name="textsize6">13sp</dimen>
+    <dimen name="textsize7">14sp</dimen>
+    <dimen name="textsize8">15sp</dimen>
+    <dimen name="textsize9">16sp</dimen>
+    <dimen name="textsize10">17sp</dimen>
+    <dimen name="textsize11">18sp</dimen>
+    <dimen name="textsize12">19sp</dimen>
+    <dimen name="textsize13">20sp</dimen>
+    <dimen name="textsize14">21sp</dimen>
+    <dimen name="textsize15">22sp</dimen>
+    <dimen name="textsize16">23sp</dimen>
+    <dimen name="textsize17">24sp</dimen>
+    <dimen name="textsize18">25sp</dimen>
+    <dimen name="textsize19">26sp</dimen>
+    <dimen name="textsize20">27sp</dimen>
+    <dimen name="textsize21">28sp</dimen>
+
+    <!-- 全局 -->
+    <dimen name="head_height">50dp</dimen>
+    <dimen name="head_back_widths">60dp</dimen>
+    <dimen name="head_png_size">30dp</dimen>
+    <dimen name="head_png_paddind_lr">12dp</dimen>
+
+    <!-- 编辑框 -->
+    <dimen name="edit_min_h">45dp</dimen>
+    <dimen name="edit_padding">10dp</dimen>
+
+    <!-- 后勤报修 -->
+    <dimen name="headmenu_radius">5dp</dimen>
+
+    <!-- 相册 -->
+    <dimen name="pic_gridview_horizonalSpacing">10dp</dimen>
+    <dimen name="pic_gridview_verticalSpacing">10dp</dimen>
+    <dimen name="item_selected_imageview_size">30dp</dimen>
+    <dimen name="album_cover_size">60dp</dimen>
+    <dimen name="album_arrow_size">20dp</dimen>
+    <dimen name="photo_size">100dp</dimen>
+    <dimen name="selected_iv_size">25dp</dimen>
+
+    <!-- 通知编辑 -->
+    <dimen name="notice_edit_divider">15dp</dimen>
+
+    <!-- 通知联系人 -->
+    <dimen name="contact_group_height">45dp</dimen>
+
+    <!-- 通知联系人 -->
+    <dimen name="show_pic_size">20dp</dimen>
+
+    <!-- 上传新闻 -->
+    <dimen name="slide_behind_height">80dp</dimen>
+    <dimen name="record_offset">30dp</dimen>
+    <dimen name="record_offset_reserve">-30dp</dimen>
+
+    <!-- 请假 -->
+    <dimen name="check_leave_header_width">70dp</dimen>
+
+    <!--dp is margin-->
+    <dimen name="margin_min30dp">-30dp</dimen>
+    <dimen name="margin_0dp">0dp</dimen>
+    <dimen name="margin_0.5dp">0.5dp</dimen>
+    <dimen name="margin_1dp">1dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_13dp">13dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_25dp">25dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="margin_35dp">35dp</dimen>
+    <dimen name="margin_37dp">37dp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_45dp">45dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="margin_70dp">70dp</dimen>
+    <dimen name="margin_75dp">75dp</dimen>
+    <dimen name="margin_76dp">76dp</dimen>
+    <dimen name="margin_80dp">80dp</dimen>
+    <dimen name="margin_90dp">90dp</dimen>
+    <dimen name="margin_100dp">100dp</dimen>
+    <dimen name="margin_120dp">120dp</dimen>
+    <dimen name="margin_130dp">130dp</dimen>
+    <dimen name="margin_150dp">150dp</dimen>
+    <dimen name="margin_180dp">180dp</dimen>
+    <dimen name="margin_200dp">200dp</dimen>
+    <dimen name="margin_220dp">220dp</dimen>
+    <dimen name="margin_250dp">250dp</dimen>
+    <dimen name="margin_300dp">300dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+</resources>

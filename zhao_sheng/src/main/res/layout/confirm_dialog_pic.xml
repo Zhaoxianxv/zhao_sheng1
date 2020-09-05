@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="20dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius5_white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/popu_select_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/upload_type"
+            android:textColor="@color/a3_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/d3_gray" />
+
+        <TextView
+            android:id="@+id/popu_select_one"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="@dimen/textsize8"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector_text_click6"
+            android:gravity="center"
+            android:text="@string/take_photo"
+            android:textColor="@color/qq_blue" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/d3_gray" />
+
+        <TextView
+            android:id="@+id/popu_select_two"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="@dimen/textsize8"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector_text_click5"
+            android:gravity="center"
+            android:text="@string/album"
+            android:textColor="@color/qq_blue" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/popu_select_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/radius5_white"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/qq_blue"
+        android:textSize="@dimen/textsize9"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/margin_5dp"
+    android:background="@color/WhiteSmoke"
+    android:paddingLeft="@dimen/margin_5dp">
+
+
+
+    <ImageView
+        android:id="@+id/video_image"
+        android:layout_width="320dp"
+        android:layout_height="@dimen/margin_180dp"
+        android:padding="@dimen/margin_20dp"
+        android:scaleType="centerInside"/>
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="学习"
+        android:textSize="@dimen/textsize7"
+        android:layout_marginTop="@dimen/margin_3dp"/>
+    <LinearLayout
+        android:layout_width="320dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学习"
+            android:textSize="@dimen/textsize4"
+            android:textColor="@color/gray_text"
+            android:layout_marginTop="@dimen/margin_3dp"/>
+        <View
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学习"
+            android:textSize="@dimen/textsize4"
+            android:textColor="@color/gray_text"
+            android:layout_marginTop="@dimen/margin_3dp"/>
+    </LinearLayout>
+</LinearLayout>

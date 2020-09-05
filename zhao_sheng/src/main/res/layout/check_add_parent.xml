@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/WhiteSmoke"
+    android:orientation="vertical">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WhiteSmoke"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:background="@drawable/layer_top_bottom_grayline_whitebg"
+                android:orientation="vertical"
+                >
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/check_add_parent_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/gray"
+                    android:text="@string/please_choose_time"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/check_add_parent_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/gray"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/check_add_parent_stu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/gray"
+                    android:text="@string/please_choose_time"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:background="@drawable/layer_top_bottom_grayline_whitebg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="考评类型"
+                    android:textColor="@color/base_color" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/check_add_parent_check_type_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/gray"
+                    android:text="@string/please_choose"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layer_top_bottom_grayline_whitebg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="就诊时间"
+                    android:textColor="@color/base_color" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/check_add_parent_seekdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/gray"
+                    android:text="@string/please_choose_time"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layer_top_bottom_grayline_whitebg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="生病日期"
+                    android:textColor="@color/base_color" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/check_add_parent_illdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/gray"
+                    android:text="@string/please_choose_time"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                   />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layer_top_bottom_grayline_whitebg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="联系电话"
+                    android:textColor="@color/base_color" />
+
+                <EditText
+                    android:id="@+id/check_add_parent_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/White"
+                    android:paddingLeft="@dimen/margin_5dp"
+                    android:gravity="right|center_vertical"
+                    android:inputType="phone"
+                    android:layout_marginLeft="@dimen/margin_80dp"
+                    android:hint="@string/please_edit_phone"
+                    android:textSize="@dimen/textsize7"
+                    android:imeOptions="actionDone"
+                    android:paddingRight="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/check_add_parent_cough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:checked="false" />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize5"
+                    android:textColor="@color/DarkGray"
+                    android:layout_toRightOf="@id/check_add_parent_cough"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_centerVertical="true"
+                    android:text="咳嗽"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/check_add_parent_eruption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:layout_centerVertical="true"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize5"
+                    android:textColor="@color/DarkGray"
+                    android:layout_toRightOf="@id/check_add_parent_eruption"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_centerVertical="true"
+                    android:text="出疹"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/check_add_parent_lymph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:layout_centerVertical="true"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize5"
+                    android:textColor="@color/DarkGray"
+                    android:layout_toRightOf="@id/check_add_parent_lymph"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_centerVertical="true"
+                    android:text="腮腺肿大"
+                    />
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_marginTop="@dimen/margin_5dp"-->
+                <!--android:layout_height="@dimen/margin_30dp">-->
+                <!--<android.support.v7.widget.AppCompatImageView-->
+                    <!--android:id="@+id/"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:srcCompat="@drawable/ic_check_box_black_24dp"-->
+                    <!--android:layout_marginLeft="@dimen/margin_20dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--app:tint="@color/DarkGray"-->
+                    <!--/>-->
+                <!--<android.support.v7.widget.AppCompatTextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="@dimen/textsize5"-->
+                    <!--android:textColor="@color/DarkGray"-->
+                    <!--android:layout_toRightOf="@id/check_add_parent_vomit"-->
+                    <!--android:layout_marginLeft="@dimen/margin_10dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:text="呕吐、腹泻"-->
+                    <!--/>-->
+            <!--</RelativeLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layer_top_bottom_grayline_whitebg"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:orientation="vertical"
+                >
+                <EditText
+                    android:id="@+id/check_add_parent_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="@dimen/margin_100dp"
+                    android:background="@null"
+                    android:textSize="@dimen/textsize9"
+                    android:gravity="start"
+                    android:padding="@dimen/margin_10dp"
+                    android:hint="备注（上报记录）" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

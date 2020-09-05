@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/public_swip"
+    android:layout_width="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+        <LinearLayout
+            android:id="@+id/process_main_scan_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/process_main_scan_selected_name"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="全部"
+                android:textColor="@color/app_base_text_color"
+                android:background="@color/GhostWhite"
+                android:gravity="center"/>
+            <!--<View-->
+            <!--android:layout_width="@dimen/margin_0.5dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/gray"/>-->
+            <!--<TextView-->
+            <!--android:id="@+id/moral_two_class"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="全部班级"-->
+            <!--android:textColor="@color/app_base_text_color"-->
+            <!--android:background="@color/GhostWhite"-->
+            <!--android:gravity="center"/>-->
+        </LinearLayout>
+        <View
+            android:id="@+id/process_main_scan_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_0.5dp"
+            android:visibility="gone"
+            android:background="@color/gray"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/public_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

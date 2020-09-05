@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.yfy.view.swipe.expandable.XExpandableListView
+            android:background="@color/f3_gray"
+            android:id="@+id/foot_expandListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#00000000"
+            android:groupIndicator="@null"
+            android:listSelector="#00000000"
+            android:scrollbars="@null" >
+        </com.yfy.view.swipe.expandable.XExpandableListView>
+
+        <LinearLayout
+            android:id="@+id/top_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ee_gray">
+            <TextView
+                android:id="@+id/foot_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="1年级"
+                android:textColor="@color/gray_text"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

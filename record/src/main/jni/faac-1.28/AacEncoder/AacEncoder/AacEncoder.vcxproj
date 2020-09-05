@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3B012E25-265A-4ADA-86A9-9885ED033E68}</ProjectGuid>
+    <RootNamespace>AacEncoder</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\AacEncoder.c" />
+    <ClCompile Include="..\..\AacEncoder2.c" />
+    <ClCompile Include="..\..\libfaac\aacquant.c" />
+    <ClCompile Include="..\..\libfaac\backpred.c" />
+    <ClCompile Include="..\..\libfaac\bitstream.c" />
+    <ClCompile Include="..\..\libfaac\channels.c" />
+    <ClCompile Include="..\..\libfaac\fft.c" />
+    <ClCompile Include="..\..\libfaac\filtbank.c" />
+    <ClCompile Include="..\..\libfaac\frame.c" />
+    <ClCompile Include="..\..\libfaac\huffman.c" />
+    <ClCompile Include="..\..\libfaac\ltp.c" />
+    <ClCompile Include="..\..\libfaac\midside.c" />
+    <ClCompile Include="..\..\libfaac\psychkni.c" />
+    <ClCompile Include="..\..\libfaac\tns.c" />
+    <ClCompile Include="..\..\libfaac\util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libfaac\aacquant.h" />
+    <ClInclude Include="..\..\libfaac\backpred.h" />
+    <ClInclude Include="..\..\libfaac\bitstream.h" />
+    <ClInclude Include="..\..\libfaac\channels.h" />
+    <ClInclude Include="..\..\libfaac\coder.h" />
+    <ClInclude Include="..\..\include\faac.h" />
+    <ClInclude Include="..\..\include\faaccfg.h" />
+    <ClInclude Include="..\..\libfaac\fft.h" />
+    <ClInclude Include="..\..\libfaac\filtbank.h" />
+    <ClInclude Include="..\..\libfaac\frame.h" />
+    <ClInclude Include="..\..\libfaac\huffman.h" />
+    <ClInclude Include="..\..\libfaac\hufftab.h" />
+    <ClInclude Include="..\..\libfaac\ltp.h" />
+    <ClInclude Include="..\..\libfaac\midside.h" />
+    <ClInclude Include="..\..\libfaac\psych.h" />
+    <ClInclude Include="..\..\libfaac\tns.h" />
+    <ClInclude Include="..\..\libfaac\util.h" />
+    <ClInclude Include="..\..\libfaac\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Android.mk" />
+    <None Include="..\..\libfaac\Makefile.am" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

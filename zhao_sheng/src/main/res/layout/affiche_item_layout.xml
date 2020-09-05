@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/margin_60dp"
+    android:id="@+id/affiche_item_lilayout"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/affiche_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textSize="@dimen/textsize9"
+        tools:text="关于哦艾薇啊uweiajflksjdfljalp1计算机为偶啊搜哦"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/affiche_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/affiche_item_title"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/textsize5"
+        android:text="12-05"
+        android:textColor="@color/hint" />
+
+
+
+</RelativeLayout>

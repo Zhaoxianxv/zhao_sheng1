@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yfy.app.duty.DutyChangeActivity">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@drawable/layer_top_gray">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:text="值周类型"/>
+        <TextView
+            android:id="@+id/duty_change_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="选择值周类型"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/margin_30dp"
+            android:textColor="@color/DarkGray"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/duty_change_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/margin_40dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@drawable/layer_top_gray">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:text="代理日期"/>
+
+        <com.yfy.view.textView.FlowLayout
+            android:id="@+id/duty_change_time_flow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_30dp"
+            android:layout_marginLeft="@dimen/margin_80dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@drawable/layer_top_gray">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:text="代理人"/>
+        <TextView
+            android:id="@+id/duty_change_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="选择一个代理人"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/margin_30dp"
+            android:textColor="@color/DarkGray"
+            />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/duty_change_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@color/white"
+        android:padding="@dimen/margin_5dp"
+        android:hint="请填写调整备注（20字以内）"
+        android:gravity="start"
+        android:textSize="@dimen/textsize8"
+        android:minHeight="@dimen/margin_100dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_apply_layout"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="@dimen/margin_80dp">
+
+    <TextView
+        android:id="@+id/tea_item_two_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:textSize="@dimen/textsize11"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/tea_item_two_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:textSize="@dimen/textsize5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/d3_gray"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/tea_item_two_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:textSize="@dimen/textsize5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center_vertical"/>
+
+</RelativeLayout>

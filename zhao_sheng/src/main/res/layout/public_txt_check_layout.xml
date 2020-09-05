@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_45dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/public_txt_check_layout">
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/public_txt_check_left_title"
+        tools:text="@string/about"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:textSize="@dimen/textsize8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.AppCompatTextView>
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/public_txt_check_right_value"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_radio_button_unchecked"
+        android:tint="@color/base_color"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

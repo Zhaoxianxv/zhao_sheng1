@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sujcet_tea_set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yfy.app.integral.subjcet.SubjcetTeaSetActivity">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+    <ListView
+        android:id="@+id/subjcet_chioce"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/a3_gray"
+        android:dividerHeight="@dimen/margin_1dp">
+
+    </ListView>
+
+</LinearLayout>

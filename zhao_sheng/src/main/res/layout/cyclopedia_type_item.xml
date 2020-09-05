@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/cyclopedia_type_iv"
+        android:layout_width="@dimen/margin_70dp"
+        android:layout_height="@dimen/margin_70dp"
+        android:src="@drawable/icon_gra_error"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin_3dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentStart="true" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_35dp"
+        android:layout_toRightOf="@id/cyclopedia_type_iv"
+        android:layout_alignBottom="@id/cyclopedia_type_iv"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="@dimen/margin_20dp"
+            android:layout_height="@dimen/margin_20dp"
+            android:src="@drawable/cyc_person_num"
+            android:layout_weight="0.01" />
+        <TextView
+            android:id="@+id/cyclopedia_type_spoor_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:drawablePadding="@dimen/margin_5dp"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_0dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/cyclopedia_type_two_iv"
+            android:layout_width="@dimen/margin_50dp"
+            android:layout_height="@dimen/margin_20dp"
+            android:src="@drawable/cyc_cultural"
+            android:layout_weight="0.01" />
+        <TextView
+            android:id="@+id/cyclopedia_type_grade_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*00"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_3dp"
+            android:drawablePadding="@dimen/margin_5dp"/>
+        <View
+            android:layout_width="@dimen/margin_50dp"
+            android:layout_height="@dimen/margin_0dp"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/cyclopedia_type_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cyclopedia_type_iv"
+        android:layout_above="@id/cyc_call_num_tv"
+        android:layout_marginLeft="@dimen/margin_35dp"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:textSize="@dimen/textsize7"
+        android:text="textssssssssssssssssssssssssss"
+        android:maxLines="3"
+
+        />
+
+
+</RelativeLayout>

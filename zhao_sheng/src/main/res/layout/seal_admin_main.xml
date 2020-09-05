@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/public_swip"
+    android:layout_width="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+        <TextView
+            android:id="@+id/seal_admin_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:background="@color/Gainsboro"
+            android:text="@string/title"
+            android:gravity="center"
+            android:textColor="@color/Maroon"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/public_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

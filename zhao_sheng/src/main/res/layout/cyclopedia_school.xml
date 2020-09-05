@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_cyclopedia_school"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_120dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:background="@color/main_red">
+            <TextView
+                android:id="@+id/cyc_item_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="sssss"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/cyc_call_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="sssss"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+
+        <include
+            android:id="@+id/bottom_index_btn"
+            layout="@layout/include_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_60dp"
+            android:layout_alignParentBottom="true" />
+        <FrameLayout
+            android:layout_width="@dimen/margin_75dp"
+            android:layout_height="@dimen/margin_75dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/oval_white_line2_bg">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/main_red"/>
+            <ImageView
+                android:layout_width="@dimen/margin_70dp"
+                android:layout_height="@dimen/margin_70dp"
+                android:src="@drawable/cyc_logo"
+                android:padding="@dimen/margin_8dp"
+                android:layout_gravity="center"
+                android:background="@drawable/oval_white_line2_red"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

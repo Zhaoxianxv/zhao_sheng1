@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/photo_item_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="@dimen/margin_100dp"
+        android:layout_height="@dimen/margin_100dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+    <com.yfy.view.CheckImageView
+        android:id="@+id/selected_iv"
+        style="@style/checkbox_null"
+        app:checked_drawable="@drawable/photo_selecteds"
+        app:un_checked_drawable="@drawable/photo_unselected" >
+    </com.yfy.view.CheckImageView>
+
+
+
+</RelativeLayout>

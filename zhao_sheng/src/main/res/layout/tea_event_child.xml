@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White">
+
+    <TextView
+        android:id="@+id/tea_event_child_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize6"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_15dp"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginBottom="@dimen/margin_8dp"/>
+    <TextView
+        android:id="@+id/tea_event_child_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tea_event_child_name"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:textColor="@color/orange2"
+        android:textSize="@dimen/textsize5"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:layout_marginRight="@dimen/margin_15dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_3dp"/>
+    <TextView
+        android:id="@+id/tea_event_child_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tea_event_child_name"
+        android:gravity="right"
+        android:textColor="@color/orange2"
+        android:textSize="@dimen/textsize5"
+        android:layout_toLeftOf="@id/tea_event_child_time"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_3dp"/>
+</RelativeLayout>

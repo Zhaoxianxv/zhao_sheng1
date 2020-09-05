@@ -1,0 +1,26 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/White"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RatingBar
+        android:id="@+id/public_type_star_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="1"
+        android:isIndicator="false"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/margin_10dp"
+        style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+        android:layout_alignParentRight="true" />
+    <TextView
+        android:id="@+id/public_type_star_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:text="后勤评价"/>
+</RelativeLayout>

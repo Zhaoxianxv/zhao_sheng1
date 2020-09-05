@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/WhiteSmoke"
+              android:orientation="vertical" >
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <com.yfy.view.ClearEditText
+            android:id="@+id/clear_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/radius5_white"
+            android:hint="@string/content"
+            android:textSize="@dimen/textsize7"
+            android:paddingRight="10dp"
+
+            app:l_Height="30dp"
+            app:l_Width="30dp"
+            app:l_drawable="@drawable/search"
+            app:r_Height="20dp"
+            app:r_Width="20dp"
+            app:r_drawable="@drawable/x" />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/a3_gray" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <TextView
+                android:id="@+id/goods_tag_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:text="未找到所需物品？点击申请采购"
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/textsize11" />
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/notice_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_40dp"
+                android:scrollbars="none" >
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</LinearLayout>

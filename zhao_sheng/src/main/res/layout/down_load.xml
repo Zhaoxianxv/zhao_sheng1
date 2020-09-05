@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+
+
+    <LinearLayout
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/download_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginTop="20dp"
+            android:indeterminate="false"
+            android:indeterminateOnly="false"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/progresspatch_blue"
+            android:secondaryProgress="0" />
+
+        <TextView
+            android:id="@+id/download_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:text="下载进度:0%" />
+    </LinearLayout>
+
+
+</LinearLayout>

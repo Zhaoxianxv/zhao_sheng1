@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="horizontal"
+
+                android:gravity="center_vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/goods_delete_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/delete_icon"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:paddingRight="@dimen/margin_10dp"
+    />
+    <TextView
+            android:id="@+id/selected_item_name"
+            android:layout_toRightOf="@id/goods_delete_content"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="@dimen/textsize9"
+            android:paddingLeft="@dimen/margin_10dp"
+            tools:text="ssss"
+            android:gravity="center_vertical"
+    />
+
+</RelativeLayout>

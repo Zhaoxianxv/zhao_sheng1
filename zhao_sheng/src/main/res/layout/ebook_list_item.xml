@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/margin_5dp"
+    android:paddingBottom="@dimen/margin_3dp">
+
+    <ImageView
+        android:id="@+id/ebook_image"
+        android:layout_width="@dimen/margin_80dp"
+        android:layout_height="@dimen/margin_80dp"
+        android:layout_marginLeft="@dimen/margin_5dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80dp"
+        android:layout_toRightOf="@id/ebook_image"
+        android:layout_marginLeft="@dimen/margin_3dp"
+        android:layout_centerVertical="true"
+        >
+        <TextView
+            android:text="x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ebook_title"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:textSize="@dimen/textsize8"
+            />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ebook_name"
+            android:textColor="@color/gray_text"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:textSize="@dimen/textsize5"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:text="ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_15dp"
+        android:paddingRight="@dimen/margin_15dp"
+        android:paddingTop="@dimen/margin_5dp"
+        android:paddingBottom="@dimen/margin_5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/DarkSlateBlue"
+        android:background="@drawable/cricle_shape_blue_line"
+        android:id="@+id/ebook_button" />
+</RelativeLayout>

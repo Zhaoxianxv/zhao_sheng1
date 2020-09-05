@@ -1,0 +1,2 @@
+include ':record', ':slidelistview_library', ':oldninedroid_library', ':mylibrary'
+include ':zhao_sheng'

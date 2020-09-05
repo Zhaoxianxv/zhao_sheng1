@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/WhiteSmoke">
+    <ImageView
+        android:id="@+id/seal_detail_item_head"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/oval_gray"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:layout_marginLeft="10dp"/>
+
+    <android.support.v7.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_45dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginRight="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        app:cardCornerRadius="@dimen/margin_5dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginBottom="@dimen/margin_5dp">
+            <TextView
+                android:id="@+id/seal_detail_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_base_color"
+                android:textStyle="bold"
+                android:textSize="@dimen/textsize8"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:text="2020.4.5"/>
+            <TextView
+                android:id="@+id/seal_detail_item_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seal_detail_item_time"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:text="@string/app_name"/>
+            <TextView
+                android:id="@+id/seal_detail_item_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:textSize="@dimen/textsize4"
+                android:text="state"/>
+            <TextView
+                android:id="@+id/seal_detail_item_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_below="@id/seal_detail_item_user"
+                android:text="@string/title"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+package com.yfy.app.net.satisfaction;
+
+import com.yfy.final_tag.Base;
+import com.yfy.final_tag.TagFinal;
+
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Namespace;
+import org.simpleframework.xml.Order;
+import org.simpleframework.xml.Root;
+
+/**
+ * Created by yfyandr on 2018/4/26.
+ */
+@Root(name = TagFinal.SATISFACTION_GET_DETAILS, strict = false)
+@Namespace(reference = TagFinal.NAMESPACE)
+@Order(elements = {TagFinal.session_key,"teacherid","coureseid","termid"})
+public class SatisfactionGetDetailReq {
+    @Namespace(reference = TagFinal.NAMESPACE)
+    @Element(name = "session_key", required = false)
+    private String session_key= Base.user.getSession_key();     ///
+
+    @Namespace(reference = TagFinal.NAMESPACE)
+    @Element(name = "teacherid", required = false)
+    private int teacherid;     ///
+
+    @Namespace(reference = TagFinal.NAMESPACE)
+    @Element(name = "coureseid", required = false)
+    private int coureseid;     ///
+
+    @Namespace(reference = TagFinal.NAMESPACE)
+    @Element(name = "termid", required = false)
+    private int termid;     ///
+
+    public void setTermid(int termid) {
+        this.termid = termid;
+    }
+
+
+    public void setTeacherid(int teacherid) {
+        this.teacherid = teacherid;
+    }
+
+    public void setCoureseid(int coureseid) {
+        this.coureseid = coureseid;
+    }
+}

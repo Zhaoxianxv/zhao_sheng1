@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius5_white">
+
+    <TextView
+        android:id="@+id/pop_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:text="查询结果"
+        android:textSize="@dimen/textsize10"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/pop_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:text="查询结果"
+        android:textSize="@dimen/textsize7"
+        android:textColor="@color/gray_text"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1dp"
+        android:background="@color/gray_text"
+        android:layout_marginTop="@dimen/margin_10dp"
+        />
+    <TextView
+        android:id="@+id/pop_dialog_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:text="确定"
+        android:textSize="@dimen/textsize9"
+        android:textColor="@color/blue"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        />
+
+
+</LinearLayout>

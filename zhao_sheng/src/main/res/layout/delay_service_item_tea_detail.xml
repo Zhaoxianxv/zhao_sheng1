@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/event_detail_item_layout"
+    android:layout_marginTop="@dimen/margin_10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/layout_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_top_bottom_grayline_whitebg"
+        android:paddingBottom="@dimen/margin_5dp"
+        android:paddingTop="@dimen/margin_5dp"
+        >
+        <ImageView
+            android:id="@+id/event_detail_head"
+            android:layout_width="@dimen/margin_50dp"
+            android:layout_height="@dimen/margin_50dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/oval_gray"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"/>
+        <TextView
+            android:id="@+id/event_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:layout_toRightOf="@id/event_detail_head"
+            android:textSize="@dimen/textsize7"/>
+        <TextView
+            android:id="@+id/event_add_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="phone"
+            android:layout_below="@id/event_add_user"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:textColor="@color/app_base_color"
+            android:layout_toRightOf="@id/event_detail_head"
+            android:textSize="@dimen/textsize7"/>
+        <TextView
+            android:id="@+id/event_del_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius5_solid_goldenrod"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:paddingTop="@dimen/margin_5dp"
+            android:paddingBottom="@dimen/margin_5dp"
+            android:paddingLeft="@dimen/margin_15dp"
+            android:paddingRight="@dimen/margin_15dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:backgroundTint="@color/Maroon"
+            android:text="删除"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize5"
+            android:textStyle="bold"
+            />
+
+
+        <LinearLayout
+            android:layout_below="@id/event_detail_head"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="@dimen/margin_5dp"
+            android:paddingBottom="@dimen/margin_5dp"
+            android:layout_marginTop="@dimen/margin_5dp">
+
+
+
+            <TextView
+                android:id="@+id/event_add_one"
+                android:layout_width="match_parent"
+                android:minHeight="28dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:gravity="center_vertical"
+                android:text="date"
+                />
+            <TextView
+                android:id="@+id/event_add_date"
+                android:layout_width="match_parent"
+                android:minHeight="28dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:gravity="center_vertical"
+                android:text="date"
+                />
+            <TextView
+                android:id="@+id/event_add_content"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:gravity="center_vertical"
+                android:text="content"
+                />
+            <com.yfy.view.multi.MultiPictureView
+                android:id="@+id/event_detail_show_multi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="@dimen/margin_5dp"
+                android:layout_marginRight="@dimen/margin_5dp"
+                app:imageLayoutMode="STATIC"
+                app:max="9"
+                app:ratio="1"
+                app:space="6dp"
+                app:span="5"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

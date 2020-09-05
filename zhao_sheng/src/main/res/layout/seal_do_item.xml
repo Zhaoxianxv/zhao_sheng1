@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_45dp"
+    android:background="@drawable/layer_top_bottom_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/seal_do_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/seal_do_key"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:gravity="center_vertical"
+        android:text="核验正确 "
+        android:textColor="@color/gray_text" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/seal_do_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/vector_done_red_24dp" />
+</RelativeLayout>

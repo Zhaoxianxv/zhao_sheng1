@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_45dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/layer_top_gray">
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:text="奖励学期"/>
+
+                <TextView
+                    android:id="@+id/award_selected_term"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="未选择"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="@dimen/margin_30dp"
+                    android:textColor="@color/DarkGray"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_45dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/layer_top_gray">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_gray_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:text="奖励分类"
+                    />
+                <TextView
+                    android:id="@+id/award_selected_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="未选择"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="@dimen/margin_30dp"
+                    android:textColor="@color/DarkGray"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/award_score_layout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="奖励状态"
+                    android:textColor="@color/black" />
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group_award"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_35dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/award_score_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/margin_5dp"
+                        style="@style/RadioButtomMinus"/>
+                    <View
+                        android:layout_width="@dimen/margin_15dp"
+                        android:layout_height="match_parent"/>
+                    <RadioButton
+                        android:id="@+id/award_score_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/margin_5dp"
+                        android:checked="true"
+                        style="@style/RadioButtomAdd"/>
+                </RadioGroup>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone"
+                    android:src="@drawable/app_setting_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:text="@string/context"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/award_content_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/award_send_hint"
+                    android:minHeight="70dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:imeOptions="actionDone"
+                    android:textSize="@dimen/textsize8" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@color/white">
+                <com.yfy.view.multi.MultiPictureView
+                    android:id="@+id/award_add_mult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    app:editable="true"
+                    app:max="9"
+                    app:ratio="1"
+                    app:space="2dp"
+                    app:span="4" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

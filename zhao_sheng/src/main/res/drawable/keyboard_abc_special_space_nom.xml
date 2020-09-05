@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/keyboard_abc_space_nom"/>
+    <!--<item android:drawable="@drawable/ic_space_bar_black_24dp"-->
+        <!--android:left="@dimen/margin_90dp"-->
+        <!--android:right="@dimen/margin_90dp"/>-->
+
+</layer-list>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    >
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <Button
+        android:id="@+id/public_recycler_del"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_alignParentBottom="true"
+        android:text=""
+        android:textColor="@color/White"
+        android:backgroundTint="@color/Maroon"/>
+
+    <com.yfy.final_tag.recycerview.SlideRecyclerView
+        android:id="@+id/public_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/public_recycler_del"
+        android:layout_marginTop="@dimen/margin_45dp"/>
+</RelativeLayout>
+

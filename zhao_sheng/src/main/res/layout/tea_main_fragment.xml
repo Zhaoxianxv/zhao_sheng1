@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.yfy.lib.hellocharts.view.LineChartView
+                android:id="@+id/chart"
+                android:paddingLeft="@dimen/margin_3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="400dp">
+            </com.yfy.lib.hellocharts.view.LineChartView>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_20dp"
+                android:background="@color/ee_gray"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_20dp"
+                    android:gravity="center_vertical"
+                    android:text="*点击下方奖项名称可查看单项数据统计"
+                    android:textSize="@dimen/textsize5"
+                    android:textColor="@color/gray"
+                    android:layout_marginLeft="@dimen/margin_20dp"/>
+
+                <com.yfy.view.textView.FlowLayout
+                    android:id="@+id/name_flow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_25dp"
+                    android:padding="@dimen/margin_5dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

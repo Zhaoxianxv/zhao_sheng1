@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.yfy.app.integral.IntegralEditActivity">
+
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+    <EditText
+        android:id="@+id/integral_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/margin_50dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:selectAllOnFocus="true"
+        android:inputType=""
+        android:padding="@dimen/margin_5dp"
+        android:hint="@string/content"
+        android:background="@color/White"/>
+    <ListView
+        android:id="@+id/integral_chioce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+</LinearLayout>

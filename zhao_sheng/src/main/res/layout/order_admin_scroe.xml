@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gainsboro">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:background="@color/White">
+
+        <RatingBar
+            android:id="@+id/score_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="5"
+            android:stepSize="1"
+            android:isIndicator="false"
+            android:layout_marginRight="@dimen/margin_10dp"
+            style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:textColor="@color/gray"
+            android:text="后勤评价"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/score_rating_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="start"
+        android:hint="@string/edit_hint"
+        android:textSize="@dimen/textsize7"
+        android:minHeight="@dimen/margin_80dp"
+        android:padding="@dimen/edit_padding"
+        android:textColorHint="@color/b3_gray"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:background="@color/WhiteSmoke"/>
+
+</LinearLayout>

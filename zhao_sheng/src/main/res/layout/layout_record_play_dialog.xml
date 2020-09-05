@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/f3_gray"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/record_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="新录音4"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/record_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:text="创建时间：2015/12/23 16:11:27"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/record_size"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:text="文件大小：0.05Mb"
+        android:textColor="#555555" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="15dp" >
+
+        <FrameLayout
+            android:id="@+id/start_pause_frala"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/start_pause_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/play2" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:text="00:00"
+            android:textColor="@android:color/black" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="01:02"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_recordplay_tv_bg"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/select"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_recordplay_tv_bg"
+            android:gravity="center"
+            android:text="使用录音"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</LinearLayout>

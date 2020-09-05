@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/margin_5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/public_detail_txt_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/seal_detail_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/textsize7"
+            android:text="用章时间："/>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/seal_detail_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+
+            android:text="namw"/>
+        <RatingBar
+            android:id="@+id/seal_detail_value_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/seal_detail_key"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:visibility="gone"
+            android:numStars="5"
+            android:rating="5"
+            android:stepSize="1"
+            android:isIndicator="true"
+            android:layout_marginRight="@dimen/margin_10dp"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small" />
+    </LinearLayout>
+    <com.yfy.view.multi.MultiPictureView
+        android:id="@+id/public_detail_layout_multi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:layout_marginLeft="@dimen/margin_5dp"
+        android:layout_marginRight="@dimen/margin_5dp"
+        app:imageLayoutMode="STATIC"
+        android:visibility="gone"
+        app:max="9"
+        app:ratio="1"
+        app:space="6dp"
+        app:span="5"
+        />
+</RelativeLayout>

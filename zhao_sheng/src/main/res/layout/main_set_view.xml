@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/WhiteSmoke"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+    <RelativeLayout
+        android:id="@+id/public_type_check_layout"
+        android:layout_width="match_parent"
+        android:background="@drawable/layer_top_bottom_grayline_whitebg"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:layout_height="45dp">
+        <RadioGroup
+            android:id="@+id/main_set_checked_group"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_15dp"
+            android:background="@drawable/radius4_radio_group"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/main_set_checked_auto"
+                android:layout_width="@dimen/margin_80dp"
+                android:layout_height="@dimen/margin_25dp"
+                android:button="@null"
+                android:text="智能排序"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize5"/>
+            <View
+                android:layout_width="@dimen/margin_1dp"
+                android:layout_height="@dimen/margin_25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/red"
+                />
+            <RadioButton
+                android:id="@+id/main_set_checked_hand"
+                android:layout_width="@dimen/margin_80dp"
+                android:layout_height="@dimen/margin_25dp"
+                android:button="@null"
+                android:text="手动排序"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize5"/>
+        </RadioGroup>
+
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/main_set_checked_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize7"
+            android:text="排序类型"
+            android:drawableTint="@color/Gray"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:background="@drawable/layer_top_bottom_grayline_whitebg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/main_set_recycler_title"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize7"
+            android:text="当前排序（智能）"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_set_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_set_recycler_title"
+
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

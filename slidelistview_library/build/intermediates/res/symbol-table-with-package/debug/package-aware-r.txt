@@ -1,0 +1,15 @@
+com.example.swiplistview
+attr slideAnimationTime
+attr slideLeftAction
+attr slideMode
+attr slideRightAction
+id both
+id left
+id none
+id reveal
+id right
+id scroll
+id slide_id_front_view
+id slide_id_left_back_view
+id slide_id_right_back_view
+styleable SlideListView slideAnimationTime slideLeftAction slideMode slideRightAction

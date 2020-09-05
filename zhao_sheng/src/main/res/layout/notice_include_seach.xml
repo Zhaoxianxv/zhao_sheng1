@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/f3_gray"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_15dp"/>
+    <TextView
+            android:id="@+id/search_tv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/margin_25dp"
+            android:layout_marginLeft="@dimen/margin_25dp"
+            android:background="@drawable/radius3_whitebg_basecolorline"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_15dp"
+            android:onClick="onClick"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/textsize4"
+            android:text="@string/index_people"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_10dp"/>
+    <TextView
+        android:id="@+id/group_type"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/layer_top_bottom_gray"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="-- 点击全选 --"
+      />
+
+</LinearLayout>

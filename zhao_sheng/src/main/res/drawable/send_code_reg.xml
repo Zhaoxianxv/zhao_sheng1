@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 默认时的背景图片-->
+
+    <item >
+        <shape>
+            <solid android:color="@color/white"></solid>
+            <stroke android:width="1sp" android:color="@color/app_base_color"/>
+            <corners android:radius="4dp"></corners>
+        </shape>
+    </item>
+
+    <item android:state_focused="true" >
+        <shape>
+            <solid android:color="@color/app_base_color"></solid>
+            <stroke android:width="1sp" android:color="@color/app_base_color"/>
+            <corners android:radius="4dp"></corners>
+        </shape>
+    </item>
+</selector>

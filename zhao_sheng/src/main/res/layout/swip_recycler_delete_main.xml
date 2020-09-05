@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/public_deleted_swipe">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ee_gray"
+        android:orientation="vertical">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+        <TextView
+                android:id="@+id/public_deleted_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_45dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/layer_top_gray"
+                android:text="@string/delete"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize9"
+        />
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/public_delete_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/public_deleted_text"
+                android:layout_marginTop="@dimen/margin_45dp">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

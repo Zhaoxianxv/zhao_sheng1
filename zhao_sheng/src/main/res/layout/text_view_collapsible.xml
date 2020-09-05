@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+    <TextView
+        android:id="@+id/desc_tv"
+        android:maxLines="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" />
+    <TextView
+        android:id="@+id/desc_op_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc_tv"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="全文"
+        android:textColor="#5f897b"
+        android:textSize="16sp"
+        android:visibility="gone" />
+</RelativeLayout>

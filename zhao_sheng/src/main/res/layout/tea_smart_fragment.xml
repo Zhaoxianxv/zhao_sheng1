@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:background="@color/White">
+                <TextView
+                    android:id="@+id/smart_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_30dp"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/textsize3"
+                    android:textColor="@color/gray"
+                    android:text="*可左右拖动表格查看数据，点击左侧获奖名称查看获奖记录"
+                    android:layout_marginLeft="@dimen/margin_25dp"/>
+                <com.yfy.form.core.SmartTable
+                    android:id="@+id/table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

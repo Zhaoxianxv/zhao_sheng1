@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:id="@+id/award_window_bg"
+    android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/award_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/margin_100dp">
+            <TextView
+                android:id="@+id/award_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50dp"
+                android:background="#f6f4f5"
+                android:textColor="@color/a3_gray"
+                android:textSize="@dimen/textsize13"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:gravity="center_vertical"
+                android:text="筛选"/>
+            <LinearLayout
+                android:id="@+id/award_dialog_bottom"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_height="@dimen/margin_50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="完成"
+                    android:visibility="gone"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <ScrollView
+                android:layout_above="@id/award_dialog_bottom"
+                android:layout_below="@id/award_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/app_base_text_color"
+                        android:textSize="@dimen/textsize11"
+                        android:paddingLeft="@dimen/margin_10dp"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:text="班级"
+                        />
+                    <com.yfy.view.GridViewForScroll
+                        android:id="@+id/award_dialog_grade_gride"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3"
+                        android:visibility="gone"
+                        android:choiceMode="singleChoice"
+                        android:listSelector="@drawable/award_txt_bg_selector"
+                        android:horizontalSpacing="@dimen/margin_3dp"
+                        android:verticalSpacing="@dimen/margin_3dp">
+
+                    </com.yfy.view.GridViewForScroll>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/app_base_text_color"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/app_base_text_color"
+                        android:textSize="@dimen/textsize11"
+                        android:paddingLeft="@dimen/margin_10dp"
+                        android:gravity="center_vertical"
+                        android:text="奖励类型"
+                        />
+                    <com.yfy.view.GridViewForScroll
+                        android:id="@+id/award_dialog_type_gride"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3"
+                        android:horizontalSpacing="@dimen/margin_3dp"
+                        android:choiceMode="singleChoice"
+                        android:listSelector="@drawable/award_txt_bg_selector"
+                        android:verticalSpacing="@dimen/margin_3dp">
+
+                    </com.yfy.view.GridViewForScroll>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/app_base_text_color"/>
+                </LinearLayout>
+            </ScrollView>
+
+
+
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>

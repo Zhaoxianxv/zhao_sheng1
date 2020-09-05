@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+android {
+    signingConfigs {
+        config {
+            keyAlias 'yfy'
+            keyPassword 'yfy123'
+            storeFile file('D:/zxx工具/重要/yfy_keyboard/keystore.jks')
+            storePassword 'yfy123'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer,
+        // you can continue to check for errors in release builds, but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.zhao_sheng"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 438
+        versionName "20200904"
+        multiDexEnabled true  //
+        renderscriptSupportModeEnabled true
+        vectorDrawables.useSupportLibrary = true//和support-vector-drawable 用于vector文件支持
+        //激光
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "98e19f31e617ce677484e20c",
+                JPUSH_CHANNEL: "developer-default",
+        ]
+        //添加注释处理
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+    }
+
+
+    buildTypes {
+        release {
+            //配置混淆
+            buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
+            minifyEnabled false//打开混淆 是开启混淆
+            shrinkResources false//资源压缩 删除无效的Resource
+            //    shrinkResources依赖于minifyEnabled，必须和minifyEnabled一起用。
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config//签名文件
+            debuggable false//
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+        }
+        debug {
+            debuggable true
+            jniDebuggable false
+            signingConfig signingConfigs.config
+            minifyEnabled false
+        }
+    }
+    //激光
+    packagingOptions {
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+}
+
+greendao {
+    schemaVersion 12
+    daoPackage 'com.yfy.greendao'
+    targetGenDir 'src/main/java'
+}
+dependencies {
+    //multiDex 配置原因。让应用的 Application 继承 MultiDexApplication
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation project(':record')
+    implementation project(':slidelistview_library')
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //glide依赖,加载圆角图
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    //透明
+    //    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'// If you want to use the GPU Filters
+    //推送
+    implementation 'cn.jiguang.sdk:jpush:3.1.3'
+    implementation 'cn.jiguang.sdk:jcore:1.2.1'
+    //注释 必须使用 annotationProcessor 依赖项配置将注解处理器添加到处理器类路径中
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    //    implementation 'com.jakewharton:butterknife:8.5.1'
+    //    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //    implementation 'com.google.dagger:dagger:2.16'
+    //    implementation 'com.github.donkingliang:ImageSelector:1.6.0'
+    // if you use the support libraries
+    //    implementation 'com.wordplat:ikvStockChart:0.1.1'
+    implementation 'com.linheimx.library:lchart:1.0.0'
+
+
+    implementation 'org.greenrobot:greendao:3.2.2'
+    /**
+     *  retrofit2
+     */
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation('com.squareup.retrofit2:converter-simplexml:2.1.0') {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+    implementation project(':mylibrary')
+}

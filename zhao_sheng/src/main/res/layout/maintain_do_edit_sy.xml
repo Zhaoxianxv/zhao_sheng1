@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/ee_gray"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+                <EditText
+                    android:id="@+id/edit_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_150dp"
+                    android:hint="请填写维修内容"
+                    android:background="@color/white"
+                    android:gravity="start"
+                    />
+                <com.yfy.view.multi.MultiPictureView
+                    android:id="@+id/maintian_do_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+
+                    app:editable="true"
+                    app:max="9"
+                    app:ratio="1"
+                    app:space="2dp"
+                    app:span="5" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/d3_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:background="@color/lig_gray"
+                android:textSize="@dimen/textsize7"
+                android:text="设置维修状态"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/d3_gray"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/d3_gray"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/maintian_do_ing"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50dp"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/textsize9"
+                        android:paddingLeft="@dimen/margin_10dp"
+                        android:text="维修进行中"
+                        android:textColor="@color/Gray"/>
+                    <ImageView
+                        android:id="@+id/maintian_do_ing_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_50dp"
+                        android:layout_marginRight="@dimen/margin_10dp"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/vector_done_red_24dp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:background="@color/d3_gray"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/maintian_do_ok"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50dp"
+                        android:textSize="@dimen/textsize9"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_10dp"
+                        android:text="完成维修"
+                        android:textColor="@color/Gray"/>
+                    <ImageView
+                        android:id="@+id/maintian_do_ok_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_50dp"
+                        android:layout_marginRight="@dimen/margin_10dp"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/vector_done_red_24dp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:background="@color/d3_gray"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/maintian_do_cancle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50dp"
+                        android:textSize="@dimen/textsize9"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_10dp"
+                        android:text="驳回维修"
+                        android:textColor="@color/Gray"/>
+                    <ImageView
+                        android:id="@+id/maintian_do_cnacle_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_50dp"
+                        android:layout_marginRight="@dimen/margin_10dp"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/vector_done_red_24dp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

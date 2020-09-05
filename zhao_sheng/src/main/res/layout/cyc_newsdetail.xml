@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <com.yfy.view.SQToolBar
+         style="@style/App_SQToolbar"/>
+
+    <FrameLayout
+        android:id="@+id/container_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="" />
+
+        <com.yfy.view.LoadingView
+            android:id="@+id/loadingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:bar_height="40dp"
+            app:bar_width="40dp"
+            app:sourceId="@drawable/app_icon_loading" >
+        </com.yfy.view.LoadingView>
+    </FrameLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp">
+
+        <TextView
+            android:id="@+id/include_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:background="@color/main_red"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/textsize10"
+            android:text="参与词条编辑"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1dp"
+            android:background="#e7f1e7"
+            android:layout_marginTop="@dimen/margin_5dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1dp"
+            android:background="#e7f1e7"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_5dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

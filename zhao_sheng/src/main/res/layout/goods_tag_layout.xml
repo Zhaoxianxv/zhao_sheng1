@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+
+    android:id="@+id/goods_tag_layout"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/selected_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:textSize="@dimen/textsize9"
+        android:paddingLeft="@dimen/margin_20dp"
+        tools:text="ssss"
+        android:gravity="center_vertical"
+        />
+    <TextView
+        android:id="@+id/selected_item_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize5"
+        android:textColor="@color/DarkGray"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_3dp"
+        tools:text="ssss"
+        android:layout_below="@id/selected_item_name"
+        />
+    <TextView
+        android:id="@+id/selected_item_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize5"
+        android:textColor="@color/DarkGray"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_3dp"
+        android:visibility="gone"
+        tools:text="ssss"
+        android:layout_below="@id/selected_item_type"
+        />
+
+</RelativeLayout>

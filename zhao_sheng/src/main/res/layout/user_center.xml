@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+    <EditText
+        android:id="@+id/alter_old_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:background="@android:color/white"
+        android:hint="请输入原密码"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/gray"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/margin_20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:id="@+id/alter_new_first_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:background="@android:color/white"
+        android:hint="请输入新密码"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/gray"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/margin_20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:id="@+id/alter_new_again_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:background="@android:color/white"
+        android:hint="请再次输入新密码"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/gray"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/margin_20dp"
+        />
+
+</LinearLayout>

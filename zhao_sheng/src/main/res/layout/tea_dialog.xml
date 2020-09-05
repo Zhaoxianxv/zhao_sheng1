@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yfy.app.tea_event.DialogActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius10_white"
+        android:layout_marginRight="@dimen/margin_45dp"
+        android:layout_marginLeft="@dimen/margin_45dp"
+        android:layout_centerInParent="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:text="@string/ok"
+                android:gravity="center"
+                android:textSize="@dimen/textsize8"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_15dp"
+                android:text="尊敬的家长们、亲爱的同学们：\n\t\t你们好！成都市实验小学一直致力于“办人民满意的教育”。为了客观、全面了解学校教师的职业道德状况及学校管理情况，特邀请您对本班任课老师师德以及学校管理进行评价。希望您本着对教育事业负责、对学校和教师本人负责的态度，实事求是地做出客观、公正的评价。真诚感谢您的支持与配合，谢谢！"
+                android:textSize="@dimen/textsize5"
+                android:textColor="@color/app_base_text_color"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_15dp"
+                android:text="成都市实验小学"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_3dp"
+                android:textSize="@dimen/textsize5"
+                android:textColor="@color/app_base_text_color"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1dp"
+                android:background="@color/ee_gray"
+
+                android:layout_marginTop="@dimen/margin_5dp"/>
+            <TextView
+                android:id="@+id/dialog_ok"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:text="@string/ok"
+                android:gravity="center"
+                android:textSize="@dimen/textsize10"
+                android:textStyle="bold"
+                android:textColor="@color/Blue"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

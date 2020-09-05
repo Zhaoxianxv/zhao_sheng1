@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/public_swip"
+    android:layout_width="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_45dp">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/public_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+            </android.support.design.widget.CoordinatorLayout>
+            <TextView
+                android:id="@+id/public_center_txt_add"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_45dp"
+                android:textSize="@dimen/textsize10"
+                android:textColor="@color/app_base_text_color"
+                android:background="@drawable/layer_top_bottom_grayline_whitebg"
+                android:text="新增提问"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
