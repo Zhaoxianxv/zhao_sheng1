@@ -3,14 +3,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'org.greenrobot.greendao' // apply plugin
 android {
-    signingConfigs {
-        config {
-            keyAlias 'yfy'
-            keyPassword 'yfy123'
-            storeFile file('D:/zxx工具/重要/yfy_keyboard/keystore.jks')
-            storePassword 'yfy123'
-        }
-    }
+//    signingConfigs {
+//        config {
+//            keyAlias 'yfy'
+//            keyPassword 'yfy123'
+//            storeFile file('D:/zxx工具/重要/yfy_keyboard/keystore.jks')
+//            storePassword 'yfy123'
+//        }
+//    }
     lintOptions {
         checkReleaseBuilds false
         // Or, if you prefer,
@@ -38,28 +38,34 @@ android {
 
     }
 
-
     buildTypes {
         release {
-            //配置混淆
-            buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
-            minifyEnabled false//打开混淆 是开启混淆
-            shrinkResources false//资源压缩 删除无效的Resource
-            //    shrinkResources依赖于minifyEnabled，必须和minifyEnabled一起用。
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config//签名文件
-            debuggable false//
-            jniDebuggable false
-            renderscriptDebuggable false
-            pseudoLocalesEnabled false
-        }
-        debug {
-            debuggable true
-            jniDebuggable false
-            signingConfig signingConfigs.config
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+//
+//    buildTypes {
+//        release {
+//            //配置混淆
+//            buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
+//            minifyEnabled false//打开混淆 是开启混淆
+//            shrinkResources false//资源压缩 删除无效的Resource
+//            //    shrinkResources依赖于minifyEnabled，必须和minifyEnabled一起用。
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config//签名文件
+//            debuggable false//
+//            jniDebuggable false
+//            renderscriptDebuggable false
+//            pseudoLocalesEnabled false
+//        }
+//        debug {
+//            debuggable true
+//            jniDebuggable false
+//            signingConfig signingConfigs.config
+//            minifyEnabled false
+//        }
+//    }
     //激光
     packagingOptions {
         doNotStrip '*/mips/*.so'

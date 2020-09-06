@@ -25,11 +25,13 @@ import com.yfy.app.net.check.CheckGetIllTypeReq;
 import com.yfy.base.activity.BaseActivity;
 import com.yfy.final_tag.AppLess;
 import com.yfy.final_tag.ColorRgbUtil;
+import com.yfy.final_tag.StringUtils;
 import com.yfy.final_tag.TagFinal;
 import com.yfy.final_tag.Logger;
 import com.yfy.final_tag.recycerview.DefaultItemAnimator;
 import com.yfy.final_tag.recycerview.RecycleViewDivider;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -167,9 +169,9 @@ public class CheckTypeActivity extends BaseActivity implements Callback<ResEnv> 
         if (!isActivity())return;
         dismissProgressDialog();
         closeSwipeRefresh();
-        if (response.code()==500){
-            toastShow("数据出差了");
-        }
+        List<String> names=StringUtils.listToStringSplitCharacters(call.request().headers().toString().trim(), "/");
+        String name=names.get(names.size()-1);
+
         ResEnv respEnvelope = response.body();
         if (respEnvelope != null) {
             ResBody b=respEnvelope.body;
@@ -177,7 +179,7 @@ public class CheckTypeActivity extends BaseActivity implements Callback<ResEnv> 
 
             if (b.checkGetIllTypeRes!=null) {
                 String result = b.checkGetIllTypeRes.result;
-                Logger.e(call.request().headers().toString() + result);
+                Logger.e(StringUtils.getTextJoint("%1$s:\n%2$s",name,result));
                 CheckRes res=gson.fromJson(result,CheckRes.class);
                 if (res.getResult().equals(TagFinal.TRUE)){
 
@@ -200,7 +202,14 @@ public class CheckTypeActivity extends BaseActivity implements Callback<ResEnv> 
 
             }
         }else{
-            Logger.e("evn: null"+call.request().headers().toString() );
+            try {
+                String s=response.errorBody().string();
+                Logger.e(StringUtils.getTextJoint("%1$s:%2$d:%3$s",name,response.code(),s));
+            } catch (IOException e) {
+                Logger.e(TagFinal.ZXX, "onResponse: IOException");
+                e.printStackTrace();
+            }
+            toastShow(StringUtils.getTextJoint("数据错误:%1$d",response.code()));
         }
     }
     List<IllType> adapter_list=new ArrayList<>();

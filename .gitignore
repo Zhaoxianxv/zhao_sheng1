@@ -8,6 +8,7 @@
 .externalNativeBuild
 gradle-app.setting
 *.jks
+*.gradle
 ##-------指定文件-----
 /zhao_sheng/src/main/java/com/yfy/base
 /zhao_sheng/src/main/java/com/yfy/final_tag

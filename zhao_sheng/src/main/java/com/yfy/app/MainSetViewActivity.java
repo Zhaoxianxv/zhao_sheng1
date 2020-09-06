@@ -9,6 +9,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -75,7 +76,13 @@ public class MainSetViewActivity extends BaseActivity {
         getMainItem();
 	}
 
-    private void initSQtoobar(String title) {
+	@Override
+	public void finish() {
+		setResult(RESULT_OK);
+		super.finish();
+	}
+
+	private void initSQtoobar(String title) {
         assert toolbar!=null;
         toolbar.setTitle(title);
 //        toolbar.addMenuText(TagFinal.ONE_INT,R.string.ok);
@@ -85,6 +92,12 @@ public class MainSetViewActivity extends BaseActivity {
 //
 //            }
 //        });
+		toolbar.setOnNaviClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
     }
 
     private String set_state;

@@ -240,7 +240,7 @@ public class IntegralMainActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i<1)return;
                 if (s_name.get(i-1).equals("课表")){
-                    String url = Base.SCHEDULE + Base.user.getSession_key();
+                    String url = Base.RETROFIT_URI+StringUtils.stringToGetTextJoint(Base.SCHEDULE,Base.user.getIdU(),Base.user.getUsertype());
                     Intent intent=(Intent) activitys.get(i-1).get("intent");
                     Bundle b = new Bundle();
                     b.putString(TagFinal.URI_TAG, url);

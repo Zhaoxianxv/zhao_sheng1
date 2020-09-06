@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.zhao_sheng.R;
+import com.yfy.final_tag.glide.GlideTools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,8 +61,8 @@ public class GalleryAdapter extends BaseAdapter {
 		}else{
 			viewholder = (ViewHolder) convertView.getTag();
 		}
-		
-		Glide.with(context).load(urls.get(position)).into(viewholder.icon);
+		GlideTools.chanCircle(context,urls.get(position),viewholder.icon,R.drawable.head_user);
+
 
 		return convertView;
 	}

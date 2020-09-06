@@ -8,6 +8,7 @@ buildscript {
             url 'https://maven.google.com'
         }
         // An alternative URL is 'https://dl.google.com/dl/android/maven2/'
+        // An alternative URL is 'https://dl.google.com/dl/android/maven2/'
         jcenter()
         mavenLocal()
         mavenCentral()  // GPUImage for Android

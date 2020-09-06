@@ -28,6 +28,7 @@ import com.yfy.final_tag.StringJudge;
 import com.yfy.final_tag.StringUtils;
 import com.yfy.final_tag.TagFinal;
 import com.yfy.final_tag.Logger;
+import com.yfy.final_tag.glide.GlideTools;
 
 import java.util.List;
 
@@ -89,10 +90,7 @@ public class OrderDetailActivity extends BaseActivity implements Callback<ResEnv
         getData();
     }
     private void initView(RoomDetail admin){
-        Glide.with(mActivity)
-                .load(admin.getHeadpic())
-                .apply(new RequestOptions().circleCrop())
-                .into(top_head);
+        GlideTools.chanCircle(mActivity,admin.getHeadpic(),top_head,R.drawable.head_user);
         head_name.setText(admin.getPerson());
         head_time.setText(admin.getApplydate());
         head_state.setText(admin.getStatus());

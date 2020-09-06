@@ -83,9 +83,9 @@ public class ProcessSelectUserAllAdapter extends RecyclerView.Adapter<RecyclerVi
                 parent.arrow.setImageResource(R.drawable.notice_contacts_switch_close);
             }
             if (parent.bean.isGroupChick()){
-                parent.checkBox.setImageResource(R.drawable.ic_stat_name);
+                parent.checkBox.setImageResource(R.drawable.ic_check_selected);
             }else{
-                parent.checkBox.setImageResource(R.drawable.ic_stat);
+                parent.checkBox.setImageResource(R.drawable.ic_check_unselect);
             }
         }
         if (holder instanceof ChildViewHolder){
@@ -95,9 +95,9 @@ public class ProcessSelectUserAllAdapter extends RecyclerView.Adapter<RecyclerVi
             child.name.setText(child.bean.getUsername());
             GlideTools.chanCircle(mContext,child.bean.getHeadPic(),child.user_head,R.drawable.head_user);
             if (child.bean.isChick()){
-                child.checkBox.setImageResource(R.drawable.ic_stat_name);
+                child.checkBox.setImageResource(R.drawable.ic_check_selected);
             }else{
-                child.checkBox.setImageResource(R.drawable.ic_stat);
+                child.checkBox.setImageResource(R.drawable.ic_check_unselect);
             }
         }
 

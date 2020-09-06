@@ -23,6 +23,7 @@ import com.yfy.app.net.event.EventGetMainListReq;
 import com.yfy.base.activity.BaseActivity;
 import com.yfy.db.UserPreferences;
 import com.yfy.final_tag.AppLess;
+import com.yfy.final_tag.Base;
 import com.yfy.final_tag.ColorRgbUtil;
 import com.yfy.final_tag.StringUtils;
 import com.yfy.final_tag.TagFinal;
@@ -52,6 +53,7 @@ public class EventMainActivity extends BaseActivity implements Callback<ResEnv> 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.swip_recycler_delete_main);
+        getData();
         initSQToolbar();
         initRecycler();
         getDataEvent(true,TagFinal.REFRESH);
@@ -80,6 +82,43 @@ public class EventMainActivity extends BaseActivity implements Callback<ResEnv> 
         });
     }
 
+
+
+
+    private String admin_right="",
+            admin_add=TagFinal.FALSE,
+            admin_manage=TagFinal.FALSE,
+            issupplycount=TagFinal.FALSE,
+            isoffice_supply=TagFinal.FALSE,
+            isoffice_supply_master=TagFinal.FALSE;
+    public void getData(){
+        Intent intent=getIntent();
+        admin_right=intent.getStringExtra(Base.content);
+        //权限
+        List<String> adminList=StringUtils.listToStringSplitCharacters(admin_right,",");
+        for (String s:adminList){
+            switch (s){
+                case "view":
+                    break;
+                case "add":
+                    admin_add=TagFinal.TRUE;
+                    break;
+                case "admin":
+                    admin_manage=TagFinal.TRUE;
+                    break;
+                case "issupplycount":
+                    issupplycount=TagFinal.TRUE;
+                    break;
+                case "isoffice_supply":
+                    isoffice_supply=TagFinal.TRUE;
+                    break;
+                case "isoffice_supply_master":
+                    isoffice_supply_master=TagFinal.TRUE;
+                    break;
+            }
+        }
+    }
+
     @OnClick(R.id.public_deleted_text)
     void setDel_view(){
         Intent intent=new Intent(mActivity,EventMyActivity.class);
@@ -90,7 +129,7 @@ public class EventMainActivity extends BaseActivity implements Callback<ResEnv> 
     private RecyclerView recyclerView;
     public void initRecycler(){
 
-        if (UserPreferences.getInstance().getUserAdmin().getIseventadmin().equals(TagFinal.TRUE)){
+        if (admin_manage.equals(TagFinal.TRUE)){
             del_view.setVisibility(View.VISIBLE);
             onemenu.setVisibility(View.VISIBLE);
         }else{

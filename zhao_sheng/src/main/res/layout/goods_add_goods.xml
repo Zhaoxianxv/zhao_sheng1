@@ -75,7 +75,7 @@
                         android:id="@+id/goods_is_check_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_stat"
+                        app:srcCompat="@drawable/ic_check_unselect"
                         android:layout_marginRight="@dimen/margin_10dp"
                         app:tint="@color/red"
                         android:layout_alignParentRight="true"

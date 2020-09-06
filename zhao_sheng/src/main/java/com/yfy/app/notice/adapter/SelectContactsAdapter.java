@@ -117,9 +117,9 @@ public class SelectContactsAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 parent.arrow.setImageResource(R.drawable.notice_contacts_switch_close);
             }
             if (parent.bean.isGroupChick()){
-                parent.checkBox.setImageResource(R.drawable.ic_stat_name);
+                parent.checkBox.setImageResource(R.drawable.ic_check_selected);
             }else{
-                parent.checkBox.setImageResource(R.drawable.ic_stat);
+                parent.checkBox.setImageResource(R.drawable.ic_check_unselect);
             }
         }
         if (holder instanceof ChildViewHolder){
@@ -129,9 +129,9 @@ public class SelectContactsAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             child.name.setText(child.bean.getUsername());
             Glide.with(mContext).load(child.bean.getHeadPic()).apply(new RequestOptions().circleCrop()).into(child.user_head);
             if (child.bean.isChick()){
-                child.checkBox.setImageResource(R.drawable.ic_stat_name);
+                child.checkBox.setImageResource(R.drawable.ic_check_selected);
             }else{
-                child.checkBox.setImageResource(R.drawable.ic_stat);
+                child.checkBox.setImageResource(R.drawable.ic_check_unselect);
             }
         }
         if (holder instanceof TopHolder){

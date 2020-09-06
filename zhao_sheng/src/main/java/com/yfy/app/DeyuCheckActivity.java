@@ -16,6 +16,7 @@ import com.example.zhao_sheng.R;
 import com.yfy.final_tag.Base;
 import com.yfy.base.activity.BaseActivity;
 import com.yfy.final_tag.DateUtils;
+import com.yfy.final_tag.StringUtils;
 import com.yfy.final_tag.dialog.DialogTools;
 import com.yfy.final_tag.Logger;
 import com.yfy.view.LoadingView;
@@ -128,7 +129,7 @@ public class DeyuCheckActivity extends BaseActivity implements OnClickListener {
 	}
 
 	private String getUrl(String sessionkey, String date) {
-		String url = Base.DEYU_KEY + Base.user.getIdU() + "&dt=" + date;
+		String url =StringUtils.stringToGetTextJoint(Base.DEYU_KEY,Base.user.getIdU(),Base.user.getUsertype(),date);
 		return url;
 	}
 

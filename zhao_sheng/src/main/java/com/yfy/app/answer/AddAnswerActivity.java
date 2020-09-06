@@ -147,6 +147,7 @@ public class AddAnswerActivity extends WcfActivity {
             switch (requestCode) {
                 case TagFinal.CAMERA:
                     photo= new Photo("", temp_path, "", FileTools.getFileSize(temp_path), true);
+
                     Glide.with(mActivity).load(temp_path).into(add_pic);
                     break;
                 case TagFinal.PHOTO_ALBUM:

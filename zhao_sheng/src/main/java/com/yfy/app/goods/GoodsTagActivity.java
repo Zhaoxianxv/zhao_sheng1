@@ -37,6 +37,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -185,9 +186,14 @@ public class GoodsTagActivity extends BaseActivity implements Callback<ResEnv> {
                 adapter.setDataList(goodsTypes);
                 adapter.setLoadState(2);
             }
-
         }else{
-            Logger.e(StringUtils.getTextJoint("%1$s:%2$d",name,response.code()));
+            try {
+                String s=response.errorBody().string();
+                Logger.e(StringUtils.getTextJoint("%1$s:%2$d:%3$s",name,response.code(),s));
+            } catch (IOException e) {
+                Logger.e(TagFinal.ZXX, "onResponse: IOException");
+                e.printStackTrace();
+            }
             toastShow(StringUtils.getTextJoint("数据错误:%1$d",response.code()));
         }
 

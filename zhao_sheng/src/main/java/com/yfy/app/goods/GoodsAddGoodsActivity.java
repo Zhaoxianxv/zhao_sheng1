@@ -102,11 +102,11 @@ public class GoodsAddGoodsActivity extends WcfActivity  implements Callback<ResE
         if (!is_check){
             is_check=true;
             check_text.setText("是否可以备注：是");
-            check_icon.setImageResource(R.drawable.ic_stat_name);
+            check_icon.setImageResource(R.drawable.ic_check_selected);
         }else{
             is_check=false;
             check_text.setText("是否可以备注：否");
-            check_icon.setImageResource(R.drawable.ic_stat);
+            check_icon.setImageResource(R.drawable.ic_check_unselect);
         }
 
     }

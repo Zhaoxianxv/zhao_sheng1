@@ -88,10 +88,6 @@ public class HomeNewActivity extends BaseActivity  {
 	@Bind(R.id.home_head)
 	ImageView login_tv;
 
-
-
-
-
 	private int[] imageUrls = {
 			R.drawable.home_header_0,
 			R.drawable.home_header_1,
@@ -188,7 +184,7 @@ public class HomeNewActivity extends BaseActivity  {
 		manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
 			@Override
 			public int getSpanSize(int position) {
-				return adapter_data_default.get(position).getSpan_size();
+				return adapter_data_show.get(position).getSpan_size();
 			}
 		});
 		base_adapter=new MainAdapter(mActivity);
@@ -209,12 +205,10 @@ public class HomeNewActivity extends BaseActivity  {
 
 			@Override
 			public void onLoad() {
-//				getMenu();
 			}
 		});
-		recyc_base.setNestedScrollingEnabled(false);
-		recyc_base.setAdapter(base_adapter);
 
+		recyc_base.setAdapter(base_adapter);
 
 	}
 
@@ -227,7 +221,7 @@ public class HomeNewActivity extends BaseActivity  {
 
 	private void addProcess(List<KeyValue> data,int res,String type){
 		KeyValue keyValue=new KeyValue(TagFinal.TYPE_ITEM);
-		keyValue.setName("设置");
+		keyValue.setName("编辑排序");
 		keyValue.setRes_image(res);
 		keyValue.setSpan_size(1);
 		keyValue.setKey("");
@@ -275,8 +269,6 @@ public class HomeNewActivity extends BaseActivity  {
 		addType(keyValue,bean,"ProcessMainActivity",bean.getRight());
 		data.add(keyValue);
 	}
-
-
 	private void addType(KeyValue keyValue,MainValue bean,String type,String right){
 		if (right==null)right="";
 		switch (bean.getUsertype()){
@@ -497,7 +489,7 @@ public class HomeNewActivity extends BaseActivity  {
 				if (isUserType(bean)){
 					intent=new Intent(mActivity,WebActivity.class);
 					intent.putExtra(Base.content,bean.getRight());
-					String url = Base.SCHEDULE + Base.user.getIdU();
+					String url = Base.RETROFIT_URI+StringUtils.stringToGetTextJoint(Base.SCHEDULE,Base.user.getIdU(),Base.user.getUsertype());
 					Bundle b = new Bundle();
 					b.putString(TagFinal.URI_TAG, url);
 					b.putString(TagFinal.TITLE_TAG, "课程表");
@@ -528,12 +520,10 @@ public class HomeNewActivity extends BaseActivity  {
 				break;
 			case "MainSetViewActivity":
 				intent = new Intent(mActivity, MainSetViewActivity.class);
-				startActivityForResult(intent,TagFinal.UI_REFRESH);
+				startActivityForResult(intent,TagFinal.UI_ADD);
 				break;
 		}
 	}
-
-
 	private Intent intentDialog;
 	private ConfirmAlbumWindow album_select;
 	private void initDialog() {
@@ -771,7 +761,7 @@ public class HomeNewActivity extends BaseActivity  {
         }else {
             isDbset(UserPreferences.getInstance().getUserSetView());
         }
-		addProcess(adapter_data_show, R.drawable.ic_settings, "MainSetViewActivity");
+		addProcess(adapter_data_show, R.drawable.main_settings, "MainSetViewActivity");
         base_adapter.setDataList(adapter_data_show);
         base_adapter.setLoadState(TagFinal.LOADING_END);
 

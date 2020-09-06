@@ -56,7 +56,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CheckStuAddParentActivity extends BaseActivity implements Callback<ResEnv> {
+public class CheckStuAddParentActivity extends BaseActivity {
     private static final String TAG = CheckStuAddParentActivity.class.getSimpleName();
 
     private CheckAddParentAdapter addParentAdapter;
@@ -288,8 +288,9 @@ public class CheckStuAddParentActivity extends BaseActivity implements Callback<
                 }
             }
 
-            String type=illBean.getTablevaluetype().split("_")[0];
-            if (type.equalsIgnoreCase(Base.DATA_TYPE_IMG)){
+            List<String> types=StringUtils.listToStringSplitCharacters(illBean.getTablevaluetype(),"_");
+//            String type=illBean.getTablevaluetype().split("_")[0];
+            if (types.get(0).equalsIgnoreCase(Base.DATA_TYPE_IMG)){
                 if (StringJudge.isEmpty(illBean.getKeyValue().getListValue())){
                     if (illBean.getTablevaluecannull().equals("0")){
                         toastShow(illBean.getTablename()+"为必填项");
@@ -299,7 +300,7 @@ public class CheckStuAddParentActivity extends BaseActivity implements Callback<
                 }else{
                     illBean.setValue(StringUtils.stringToArraysGetString(illBean.getKeyValue().getListValue(),"," ));
                 }
-                continue;
+
             }
             if (StringJudge.isEmpty(illBean.getValue())){
                 if (illBean.getTablevaluecannull().equals("0")){
@@ -335,7 +336,7 @@ public class CheckStuAddParentActivity extends BaseActivity implements Callback<
 
         req.setUserid(checkStu.getUserid());
 
-        req.setIds(StringUtils.arraysToListString(ids ));
+        req.setIds(StringUtils.arraysToListString(ids));
         req.setContents(StringUtils.arraysToListString(contants));
         reqBody.checkAddParentReq= req;
         evn.body = reqBody;
@@ -343,7 +344,6 @@ public class CheckStuAddParentActivity extends BaseActivity implements Callback<
         Call<ResEnv> call = RetrofitGenerator.getWeatherInterfaceApi().check_add_parent(evn);
         call.enqueue(this);
         showProgressDialog("正在加载");
-//
 
 
     }
@@ -366,10 +366,6 @@ public class CheckStuAddParentActivity extends BaseActivity implements Callback<
 
     @Override
     public void onResponse(Call<ResEnv> call, Response<ResEnv> response) {
-        Logger.e(TagFinal.ZXX, "onResponse: "+response.code());
-        if (response.code()==500){
-            toastShow("数据出差了");
-        }
         if (!isActivity())return;
         dismissProgressDialog();
         List<String> names=StringUtils.listToStringSplitCharacters(call.request().headers().toString().trim(), "/");

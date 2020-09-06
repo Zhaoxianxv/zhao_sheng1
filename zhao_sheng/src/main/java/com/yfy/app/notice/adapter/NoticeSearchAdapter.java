@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.zhao_sheng.R;
 import com.yfy.app.notice.bean.ChildBean;
+import com.yfy.final_tag.glide.GlideTools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,13 +85,12 @@ public class NoticeSearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
             reHolder.index=position;
             reHolder.name.setText(reHolder.bean.getUsername());
-            Glide.with(mContext).load(reHolder.bean.getHeadPic())
-                    .apply(new RequestOptions().circleCrop())
-                    .into(reHolder.user_head);
+            GlideTools.chanCircle(mContext,reHolder.bean.getHeadPic(),reHolder.user_head,R.drawable.head_user);
+
             if (reHolder.bean.isChick()){
-                reHolder.checkBox.setImageResource(R.drawable.ic_stat_name);
+                reHolder.checkBox.setImageResource(R.drawable.ic_check_selected);
             }else{
-                reHolder.checkBox.setImageResource(R.drawable.ic_stat);
+                reHolder.checkBox.setImageResource(R.drawable.ic_check_unselect);
             }
         }
     }

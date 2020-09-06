@@ -21,6 +21,7 @@ import com.yfy.app.goods.bean.GoodsBean;
 import com.yfy.final_tag.HtmlTools;
 import com.yfy.final_tag.StringJudge;
 import com.yfy.final_tag.TagFinal;
+import com.yfy.final_tag.glide.GlideTools;
 import com.yfy.view.multi.MultiPictureView;
 import org.jetbrains.annotations.NotNull;
 
@@ -91,10 +92,8 @@ public class GoodsDetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         if (holder instanceof RecyclerViewHolder) {
             RecyclerViewHolder reHolder = (RecyclerViewHolder) holder;
             reHolder.bean=dataList.get(position-1);
-            Glide.with(mContext)
-                    .load(reHolder.bean.getUser_avatar())
-                    .apply(new RequestOptions().circleCrop())
-                    .into(reHolder.head);
+            GlideTools.chanCircle(mContext,reHolder.bean.getUser_avatar(),reHolder.head,R.drawable.head_user);
+
             reHolder.name.setText(reHolder.bean.getName());
             reHolder.type.setText(reHolder.bean.getStatus());
             reHolder.content.setText(reHolder.bean.getRemark());
@@ -111,10 +110,8 @@ public class GoodsDetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         } else if (holder instanceof TopHolder) {
             TopHolder topHolder = (TopHolder) holder;
             if (bean==null)return;
-            Glide.with(mContext)
-                    .load(bean.getUser_avatar())
-                    .apply(new RequestOptions().circleCrop())
-                    .into(topHolder.top_head);
+            GlideTools.chanCircle(mContext,bean.getUser_avatar(),topHolder.top_head,R.drawable.head_user);
+
             topHolder.top_name.setText(bean.getUsername());
             topHolder.top_time.setText(bean.getSubmit_time());
             topHolder.top_one.setText(HtmlTools.getHtmlString(base_bg,"物品名称：",text_color,bean.getItem_name()));
